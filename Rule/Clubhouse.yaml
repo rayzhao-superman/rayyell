@@ -1,6 +1,6 @@
 # > Clubhouse 服务器
- - DOMAIN-SUFFIX,clubhouseapi.com
- - DOMAIN-SUFFIX,joinclubhouse.com
- - DOMAIN,clubhouseprod.s3.amazonaws.com
- - DOMAIN,clubhouse.pubnub.com
- - DOMAIN-KEYWORD,clubhouse
+- DOMAIN-SUFFIX,clubhouseapi.com
+- DOMAIN-SUFFIX,joinclubhouse.com
+- DOMAIN,clubhouseprod.s3.amazonaws.com
+- DOMAIN,clubhouse.pubnub.com
+- DOMAIN-KEYWORD,clubhouse
