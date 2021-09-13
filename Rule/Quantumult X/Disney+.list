@@ -1,0 +1,17 @@
+# > Disney Plus
+USER-AGENT,Disney*
+HOST-SUFFIX,disneyplus.com
+HOST-SUFFIX,disney-plus.net
+HOST-SUFFIX,disneystreaming.com
+HOST-SUFFIX,dssott.com
+HOST-SUFFIX,bamgrid.com
+HOST,disney.api.edge.bamgrid.com
+HOST,disney.connections.edge.bamgrid.com
+HOST,disney.content.edge.bamgrid.com
+HOST,disney.playback.edge.bamgrid.com
+HOST,cdn.registerdisney.go.com
+HOST-SUFFIX,execute-api.us-east-1.amazonaws.com
+HOST-SUFFIX,braze.com
+HOST,cdn.cdn.unid.go.com
+HOST-SUFFIX,conviva.com
+HOST-SUFFIX,disney.demdex.net
