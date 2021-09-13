@@ -1,5 +1,5 @@
 # > Disney Plus
-USER-AGENT,Disney*
+USER-AGENT,Disney*,DisneyPlus
 HOST-SUFFIX,disneyplus.com
 HOST-SUFFIX,disney-plus.net
 HOST-SUFFIX,disneystreaming.com
