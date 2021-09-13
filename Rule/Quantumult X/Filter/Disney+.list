@@ -5,6 +5,7 @@ HOST-SUFFIX,disney-plus.net,DisneyPlus
 HOST-SUFFIX,disneystreaming.com,DisneyPlus
 HOST-SUFFIX,dssott.com,DisneyPlus
 HOST-SUFFIX,bamgrid.com,DisneyPlus
+HOST,disney.my.sentry.io,DisneyPlus
 HOST,disney.api.edge.bamgrid.com,DisneyPlus
 HOST,disney.connections.edge.bamgrid.com,DisneyPlus
 HOST,disney.content.edge.bamgrid.com,DisneyPlus
