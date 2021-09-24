@@ -1,13 +1,13 @@
 # > Microsoft
-USER-AGENT*
-DOMAIN-KEYWORD
+USER-AGENT*,Microsoft*
+DOMAIN-KEYWORD,microsoft
 DOMAIN-SUFFIX,ms
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,live.net
-DOMAIN-SUFFIXtranslator.com
+DOMAIN-SUFFIX,microsofttranslator.com
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,msocdn.com
