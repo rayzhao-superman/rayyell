@@ -16,10 +16,10 @@ USER-AGENT,geod*
 USER-AGENT,locationd*
 USER-AGENT,Maps*
 USER-AGENT,TestFlight*
-DOMAIN-SUFFIX.co
-DOMAIN-SUFFIX.com
-DOMAIN-SUFFIX.com.cn
-DOMAIN-SUFFIX-cloudkit.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,crashlytics.com
