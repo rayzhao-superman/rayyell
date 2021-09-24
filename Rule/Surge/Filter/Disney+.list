@@ -1,6 +1,6 @@
 # > Disney Plus
 USER-AGENT,Disney*
-DOMAIN-SUFFIX.com
+DOMAIN-SUFFIX,disneyplus.com
 DOMAIN-SUFFIX,disney-plus.net
 DOMAIN-SUFFIX,disneystreaming.com
 DOMAIN-SUFFIX,dssott.com
