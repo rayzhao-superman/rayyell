@@ -1,0 +1,11 @@
+# > NBA
+USER-AGENT,NBA*,NBA
+DOMAIN-KEYWORD,nba,NBA
+DOMAIN,identity.nba.com,NBA
+DOMAIN,cdn.nba.com,NBA
+DOMAIN,watch.nba.com,NBA
+DOMAIN,stats.nba.com,NBA
+DOMAIN,content-api-prod.nba.com,NBA
+DOMAIN,nbapcm.neulion.com,NBA
+DOMAIN,nbadsdmt.akamaized.net,NBA
+DOMAIN,nbaapi.neulion.com,NBA
