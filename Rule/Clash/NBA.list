@@ -1,0 +1,11 @@
+payload:
+  # > NBA
+  - DOMAIN-KEYWORD,nba
+  - DOMAIN,identity.nba.com
+  - DOMAIN,cdn.nba.com
+  - DOMAIN,watch.nba.com
+  - DOMAIN,stats.nba.com
+  - DOMAIN,content-api-prod.nba.com
+  - DOMAIN,nbapcm.neulion.com
+  - DOMAIN,nbadsdmt.akamaized.net
+  - DOMAIN,nbaapi.neulion.com
