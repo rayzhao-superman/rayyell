@@ -6,17 +6,11 @@ payload:
   - DOMAIN,watch.nba.com
   - DOMAIN,stats.nba.com
   - DOMAIN,content-api-prod.nba.com
-  - DOMAIN,nbapcm.neulion.com
-  - DOMAIN,nbadsdmt.akamaized.net
-  - DOMAIN,nbaapi.neulion.com
-  - DOMAIN,lion-nba-msl.akamaized.net
-  - DOMAIN,nlnbamdnyc-a.akamaihd.net
-  - DOMAIN,neulion-a.akamaihd.net
-  - DOMAIN,tracker.easelive.tv
-  - DOMAIN,nba.cloud.easelive.tv
-  - DOMAIN,nbaprop.hb-api.omtrdc.net
-  - DOMAIN,nlnbaqos.neulion.com
-  - DOMAIN,api2.branch.io
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN-SUFFIX,akamaihd.net
+  - DOMAIN-SUFFIX,easelive.tv
+  - DOMAIN-SUFFIX,omtrdc.net
+  - DOMAIN-SUFFIX,neulion.com
+  - DOMAIN-SUFFIX,branch.io
   - DOMAIN,sb.scorecardresearch.com
-  - DOMAIN,nba-cdn.cloud.easelive.tv
   - DOMAIN,api2.amplitude.com
