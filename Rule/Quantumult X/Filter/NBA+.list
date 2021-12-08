@@ -1,0 +1,5 @@
+# > NBA
+HOST,watch.nba.com,NBA
+HOST-SUFFIX,akamaized.net,NBA
+HOST-SUFFIX,akamaihd.net,NBA
+HOST-SUFFIX,easelive.tv,NBA
