@@ -1,5 +1,6 @@
 # > NBA
 USER-AGENT,NBA*,NBA
+HOST-KEYWORD,nba,NBA
 HOST-SUFFIX,nba.com,NBA
 HOST,identity.nba.com,NBA
 HOST,cdn.nba.com,NBA
