@@ -9,7 +9,7 @@ DOMAIN,content-api-prod.nba.com
 DOMAIN,nbapcm.neulion.com
 DOMAIN,nbadsdmt.akamaized.net
 DOMAIN,lion-nba-msl.akamaized.net
-DOMAIN,nlnbamdnyc-a.akamaihd.net
+DOMAIN-SUFFIX,akamaihd.net
 DOMAIN,nbaapi.neulion.com
 DOMAIN,neulion-a.akamaihd.net
 DOMAIN,tracker.easelive.tv
