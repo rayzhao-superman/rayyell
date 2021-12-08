@@ -9,3 +9,6 @@ payload:
   - DOMAIN,nbapcm.neulion.com
   - DOMAIN,nbadsdmt.akamaized.net
   - DOMAIN,nbaapi.neulion.com
+  - DOMAIN,lion-nba-msl.akamaized.net
+  - DOMAIN,nlnbamdnyc-a.akamaihd.net
+  - DOMAIN,neulion-a.akamaihd.net
