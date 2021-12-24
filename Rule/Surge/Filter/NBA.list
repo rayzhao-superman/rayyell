@@ -9,4 +9,7 @@ DOMAIN-SUFFIX,omtrdc.net
 DOMAIN-SUFFIX,neulion.com
 DOMAIN-SUFFIX,branch.io
 DOMAIN,sb.scorecardresearch.com
-DOMAIN,api2.amplitude.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN,assets.adobedtm.com
+DOMAIN,dpm.demdex.net
+DOMAIN,watchnba.cdnfastly.endeavorstreaming.net
