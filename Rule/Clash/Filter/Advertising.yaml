@@ -1,3 +1,4 @@
 payload:
   # Advertising
   - DOMAIN-KEYWORD,adservice
+  - DOMAIN,shield-twoproxy.imggaming.com
