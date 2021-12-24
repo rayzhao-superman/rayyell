@@ -5,6 +5,7 @@ payload:
   - DOMAIN,cdn.nba.com
   - DOMAIN,stats.nba.com
   - DOMAIN,content-api-prod.nba.com
+  - DOMAIN-SUFFIX,nba.com
   - DOMAIN-SUFFIX,omtrdc.net
   - DOMAIN-SUFFIX,neulion.com
   - DOMAIN-SUFFIX,branch.io
