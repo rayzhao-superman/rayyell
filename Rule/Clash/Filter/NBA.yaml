@@ -1,6 +1,6 @@
 payload:
   # > NBA 服务器
-  - DOMAIN-KEYWORD,nba
+  # - DOMAIN-KEYWORD,nba
   - DOMAIN,identity.nba.com
   - DOMAIN,cdn.nba.com
   - DOMAIN,stats.nba.com
