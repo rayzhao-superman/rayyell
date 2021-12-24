@@ -2,15 +2,11 @@
 USER-AGENT,NBA*,NBA
 HOST-KEYWORD,nba,NBA
 HOST-SUFFIX,nba.com,NBA
-HOST,identity.nba.com,NBA
-HOST,cdn.nba.com,NBA
-HOST,stats.nba.com,NBA
-HOST,content-api-prod.nba.com,NBA
 HOST-SUFFIX,omtrdc.net,NBA
 HOST-SUFFIX,neulion.com,NBA
 HOST-SUFFIX,branch.io,NBA
 HOST,sb.scorecardresearch.com,NBA
 HOST-SUFFIX,amplitude.com,NBA
 HOST,assets.adobedtm.com,NBA
-HOST,dpm.demdex.net,NBA
+HOST-SUFFIX,demdex.net,NBA
 HOST,watchnba.cdnfastly.endeavorstreaming.net,NBA
