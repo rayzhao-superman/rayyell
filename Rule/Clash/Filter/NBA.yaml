@@ -1,10 +1,6 @@
 payload:
   # > NBA 服务器
   # - DOMAIN-KEYWORD,nba
-  - DOMAIN,identity.nba.com
-  - DOMAIN,cdn.nba.com
-  - DOMAIN,stats.nba.com
-  - DOMAIN,content-api-prod.nba.com
   - DOMAIN-SUFFIX,nba.com
   - DOMAIN-SUFFIX,omtrdc.net
   - DOMAIN-SUFFIX,neulion.com
