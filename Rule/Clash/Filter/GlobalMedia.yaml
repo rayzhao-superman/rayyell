@@ -10,7 +10,6 @@ payload:
   - DOMAIN-SUFFIX,p-cdn.us
   - DOMAIN-SUFFIX,sndcdn.com
   - DOMAIN-SUFFIX,soundcloud.com
-  - DOMAIN-SUFFIX,tidal.com
   - DOMAIN-SUFFIX,c4assets.com
   - DOMAIN-SUFFIX,channel4.com
   - DOMAIN-SUFFIX,abema.io
