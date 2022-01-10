@@ -1,5 +1,5 @@
 payload:
-   # > GCash
-   - USER-AGENT,GCash*
-   - DOMAIN-SUFFIX,gcash.com
-   - DOMAIN-SUFFIX,mynt.xyz
+  # > GCash
+  - USER-AGENT,GCash*
+  - DOMAIN-SUFFIX,gcash.com
+  - DOMAIN-SUFFIX,mynt.xyz
