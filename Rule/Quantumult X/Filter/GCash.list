@@ -1,0 +1,4 @@
+# > GCash
+USER-AGENT,GCash*,GCash
+HOST-SUFFIX,gcash.com,GCash
+HOST-SUFFIX,mynt.xyz,GCash
