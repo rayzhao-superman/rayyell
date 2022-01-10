@@ -349,5 +349,3 @@ HOST-SUFFIX,zmz002.com,Mainland
 HOST-SUFFIX,cn,Mainland
 IP-CIDR,1.255.62.0/24,Mainland
 HOST-SUFFIX,turgame.com,Mainland
-# GEOIP 
-GEOIP,CN,Mainland
