@@ -2,3 +2,7 @@
 USER-AGENT,Deezer*,Deezer
 DOMAIN-SUFFIX,deezer.com,Deezer
 DOMAIN-SUFFIX,dzcdn.net,Deezer
+DOMAIN-SUFFIX,sentry.io,Deezer
+DOMAIN-SUFFIX,dn9.biz,Deezer
+DOMAIN-SUFFIX,img.cdn.house,Deezer
+DOMAIN-SUFFIX,script.crazyegg.com,Deezer
