@@ -9,7 +9,7 @@ payload:
   - DOMAIN-SUFFIX,home-intl.console.aliyun.com
   - DOMAIN,ip.skk.moe
   - DOMAIN,ip.sb
-  - DOMAIN,*.translate.googleapis.com
+  - DOMAIN,translate.googleapis.com
   - DOMAIN-SUFFIX,googleapis.cn
   - DOMAIN-SUFFIX,ampproject.org
   - DOMAIN-SUFFIX,googleapis.cn
