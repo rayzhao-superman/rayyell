@@ -24,6 +24,8 @@ DOMAIN-KEYWORD,onedrive
 DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,skype.com
 DOMAIN-SUFFIX,storage.live.com
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,bing.net
 
 # > PayPal
 USER-AGENT,PayPal*
