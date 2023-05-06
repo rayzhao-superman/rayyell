@@ -24,6 +24,8 @@ HOST-KEYWORD,onedrive,Outside
 HOST-SUFFIX,onedrive.com,Outside
 HOST-SUFFIX,skype.com,Outside
 HOST-SUFFIX,storage.live.com,Outside
+HOST-SUFFIX,bing.com,Outside
+HOST-SUFFIX,bing.net,Outside
 
 # > Pornhub
 HOST-SUFFIX,phncdn.com,Outside
