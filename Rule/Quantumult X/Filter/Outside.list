@@ -630,7 +630,7 @@ HOST-SUFFIX,zalmos.com,Outside
 HOST-SUFFIX,zaobao.com.sg,Outside
 HOST-SUFFIX,zeutch.com,Outside
 HOST-SUFFIX,zoom.us,Outside
-HOST-SUFFIX,zynamics.com,Outside
+HOST-SUFFIX,chat.openai.com,Outside
 
 # > Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
 HOST-KEYWORD,appledaily,Outside
