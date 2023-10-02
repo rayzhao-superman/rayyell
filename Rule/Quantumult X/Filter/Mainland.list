@@ -350,3 +350,14 @@ HOST-SUFFIX,cn,Mainland
 IP-CIDR,1.255.62.0/24,Mainland
 HOST-SUFFIX,turgame.com,Mainland
 HOST-KEYWORD,cntv,Mainland
+HOST-SUFFIX,zijieapi.com,Mainland
+HOST-SUFFIX,bdurl.net,Mainland
+HOST-SUFFIX,toutiaoimg.com,Mainland
+HOST-SUFFIX,toutiaostatic.com,Mainland
+HOST-SUFFIX,byteimg.com,Mainland
+HOST-SUFFIX,ibytedapm.com,Mainland
+HOST-SUFFIX,itoutiaostatic.com,Mainland
+HOST-SUFFIX,bytegecko.com,Mainland
+HOST-SUFFIX,bytedance.com,Mainland
+HOST-SUFFIX,ecombdapi.com,Mainland
+HOST-SUFFIX,meituan.com,Mainland
