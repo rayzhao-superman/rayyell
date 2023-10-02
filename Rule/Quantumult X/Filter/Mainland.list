@@ -376,4 +376,7 @@ HOST-SUFFIX,mmstat.com,Mainland
 HOST-SUFFIX,dingtalk.com,Mainland
 HOST-SUFFIX,aliyuncs.com,Mainland
 IP-CIDR,47.246.137.0/24,Mainland
+HOST-SUFFIX,ucweb.com,Mainland
+HOST-SUFFIX,tanx.com,Mainland
+HOST-SUFFIX,effirst.com,Mainland
 
