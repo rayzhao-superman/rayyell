@@ -349,6 +349,24 @@ DOMAIN-SUFFIX,zmz002.com
 DOMAIN-SUFFIX,cn
 IP-CIDR,1.255.62.0/24
 DOMAIN-SUFFIX,turgame.com
+DOMAIN-SUFFIX,zijieapi.com
+DOMAIN-SUFFIX,bdurl.net
+DOMAIN-SUFFIX,toutiaoimg.com
+DOMAIN-SUFFIX,toutiaostatic.com
+DOMAIN-SUFFIX,byteimg.com
+DOMAIN-SUFFIX,ibytedapm.com
+DOMAIN-SUFFIX,itoutiaostatic.com
+DOMAIN-SUFFIX,bytegecko.com
+DOMAIN-SUFFIX,bytedance.com
+DOMAIN-SUFFIX,ecombdapi.com
+DOMAIN-SUFFIX,meituan.com
+DOMAIN-SUFFIX,toutiaovod.com
+DOMAIN-SUFFIX,douyinvod.com
+DOMAIN-SUFFIX,zjcdn.com
+DOMAIN-SUFFIX,amemv.com
+DOMAIN-SUFFIX,kuinuica.com
+DOMAIN-SUFFIX,xycdn.com
+DOMAIN-SUFFIX,pinduoduo.com
 
 # GEOIP 
 GEOIP,CN
