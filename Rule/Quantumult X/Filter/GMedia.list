@@ -22,11 +22,6 @@ HOST-SUFFIX,hayabusa.io,GMedia
 # HOST,news-events.apple.com,GMedia
 # HOST-SUFFIX,apple.news,GMedia
 
-# > Apple TV
-HOST,np-edge.itunes.apple.com,GMedia
-HOST,play-edge.itunes.apple.com,GMedia
-HOST-SUFFIX,tv.apple.com,GMedia
-
 # > Bahamut
 USER-AGENT,Anime*,GMedia
 HOST-SUFFIX,bahamut.com.tw,GMedia
