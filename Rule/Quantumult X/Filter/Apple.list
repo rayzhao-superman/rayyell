@@ -30,3 +30,6 @@ HOST-SUFFIX,itunes.com,Apple
 HOST-SUFFIX,me.com,Apple
 HOST-SUFFIX,mzstatic.com,Apple
 HOST,api.smoot.apple.cn,Apple
+HOST,np-edge.itunes.apple.com,Apple
+HOST,play-edge.itunes.apple.com,Apple
+HOST-SUFFIX,tv.apple.com,Apple
