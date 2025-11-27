@@ -1,0 +1,4 @@
+; === 1. 中国大陆 Google (GoogleCN) 规则 - 策略组: GoogleCN (直连) ===
+DOMAIN-SUFFIX,google.cn,GoogleCN
+DOMAIN-SUFFIX,gvt1.cn,GoogleCN
+DOMAIN-SUFFIX,gstatic.cn,GoogleCN
