@@ -1,5 +1,35 @@
-# > PayPal
-USER-AGENT,PayPal*,PayPal
-HOST-KEYWORD,paypal,PayPal
-HOST-SUFFIX,paypal.com,PayPal
-HOST-SUFFIX,paypalobjects.com,PayPal
+# Quantumult X 远程分流规则 - PayPal Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'PayPal'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. PayPal 核心网站和认证域名
+HOST-SUFFIX, paypal.com, PayPal
+HOST-SUFFIX, paypal-biz.com, PayPal
+HOST-SUFFIX, paypalobjects.com, PayPal   # 静态资源和支付对象
+
+# 2. 贝宝 API 和支付相关域名
+HOST-SUFFIX, api.paypal.com, PayPal
+HOST-SUFFIX, payments.google.com, PayPal # 可能会通过 Google Pay 等集成服务
+
+# 3. 字体/静态资源/CDN
+HOST-SUFFIX, c.paypal.com, PayPal
+HOST-SUFFIX, www.paypal-knowledge.com, PayPal
+HOST-SUFFIX, images.paypal-content.com, PayPal
+HOST-SUFFIX, ppcdn.net, PayPal
+
+# 4. Braintree (贝宝旗下支付解决方案)
+HOST-SUFFIX, braintreepayments.com, PayPal
+HOST-SUFFIX, braintree-api.com, PayPal
+
+# 5. Venmo (贝宝旗下P2P支付)
+HOST-SUFFIX, venmo.com, PayPal
+
+# === B. IP 段 (IP-CIDR) 规则 (可选) ===
+# PayPal主要依赖 Akamai, Google等大型CDN，IP段变动较大，通常域名匹配已足够。
+# IP-CIDR, 64.4.240.0/24, PayPal
+# IP-CIDR, 66.211.168.0/24, PayPal
