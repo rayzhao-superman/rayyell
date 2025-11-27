@@ -1,10 +1,35 @@
-# > Twitter
-HOST-SUFFIX,pscp.tv,Twitter
-HOST-SUFFIX,periscope.tv,Twitter
-HOST-SUFFIX,t.co,Twitter
-HOST-SUFFIX,twimg.co,Twitter
-HOST-SUFFIX,twimg.com,Twitter
-HOST-SUFFIX,twitpic.com,Twitter
-HOST-SUFFIX,twitter.com,Twitter
-HOST-SUFFIX,twitter.jp,Twitter
-HOST-SUFFIX,vine.co,Twitter
+# Quantumult X 远程分流规则 - Twitter (X) Uniform List
+# URL: [您的 GitHub 链接]
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Twitter'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Twitter (X) 核心域名
+HOST-SUFFIX, twitter.com, Twitter
+HOST-SUFFIX, x.com, Twitter
+HOST-SUFFIX, twimg.com, Twitter
+HOST-SUFFIX, t.co, Twitter
+
+# 2. 内容分发网络 (CDN) / 静态资源 / 图片视频
+HOST-SUFFIX, twitter-cdn.com, Twitter
+HOST-SUFFIX, pbs.twimg.com, Twitter
+HOST-SUFFIX, ttp.sh, Twitter
+
+# 3. API 及其他服务
+HOST-SUFFIX, api.twitter.com, Twitter
+HOST-SUFFIX, abs.twimg.com, Twitter
+HOST-SUFFIX, periscope.tv, Twitter
+
+# 4. 广告和跟踪 (可选，如果想走代理)
+# HOST-SUFFIX, analytics.twitter.com, Twitter 
+
+
+# === B. IP 段 (IP-CIDR) 规则 ===
+
+# Twitter (X) 也主要依赖大型云服务商。通常域名匹配足够。
+# 如果需要额外的 IP 匹配，以下是其主要的 ASN 范围：
+# IP-CIDR, 104.244.42.0/24, Twitter 
+# IP-CIDR, 199.16.156.0/22, Twitter 
+# IP-CIDR, 104.244.43.0/24, Twitter
