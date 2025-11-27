@@ -1,3 +1,17 @@
-# > Disney++
-HOST-SUFFIX,media.dssott.com,DisneyPlus+
-HOST,prod-ripcut-delivery.disney-plus.net,DisneyPlus+
+# Quantumult X 远程分流规则 - DisneyPlus+ 视频流优化版
+# 策略: DisneyPlus+
+# -----------------------------------------------
+
+# === 1. 核心视频流媒体域名 ===
+HOST-SUFFIX, disneystreaming.net, DisneyPlus+  # 核心流媒体基础设施
+HOST-SUFFIX, disney-plus.net, DisneyPlus+      # 内容交付 (Content Delivery)
+HOST-SUFFIX, dssott.com, DisneyPlus+           # 媒体内容交付
+HOST-SUFFIX, bamgrid.com, DisneyPlus+          # 核心流媒体技术平台
+
+# 2. 视频交付精确 HOST
+HOST, prod-ripcut-delivery.disney-plus.net, DisneyPlus+
+HOST, disney.playback.edge.bamgrid.com, DisneyPlus+
+
+# 3. 视频流 CDN 域名
+HOST-SUFFIX, akamaized.net, DisneyPlus+        # Akamai CDN
+HOST-SUFFIX, akamaihd.net, DisneyPlus+
