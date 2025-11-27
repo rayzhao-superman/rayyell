@@ -1,8 +1,15 @@
-# > Star+
-USER-AGENT,Star+,StarPlus
-HOST-SUFFIX,starplus.com,StarPlus
-HOST-SUFFIX,starott.com,StarPlus
-HOST,star.api.edge.bamgrid.com,StarPlus
-HOST,star.connections.edge.bamgrid.com,StarPlus
-HOST,star.content.edge.bamgrid.com,StarPlus
-HOST,star.playback.edge.bamgrid.com,StarPlus
+# Quantumult X 远程分流规则 - StarPlus API/辅助功能优化版
+# 策略: StarPlus
+# -----------------------------------------------
+
+# === 1. 核心 App/网站 API 和认证 ===
+HOST-SUFFIX, api.starplus.com, StarPlus
+HOST-SUFFIX, stardisney.com, StarPlus
+HOST-SUFFIX, cdn.registerdisney.go.com, StarPlus
+
+# 2. 统计、追踪和推送
+HOST-SUFFIX, braze.com, StarPlus
+HOST-SUFFIX, scorecardresearch.com, StarPlus
+HOST-SUFFIX, demdex.net, StarPlus
+HOST-SUFFIX, omtrdc.net, StarPlus
+HOST-SUFFIX, conviva.com, StarPlus
