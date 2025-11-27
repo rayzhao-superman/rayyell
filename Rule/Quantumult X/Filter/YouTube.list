@@ -1,10 +1,27 @@
-# > YouTube
-USER-AGENT,*youtube*,YouTube
-USER-AGENT,YouTube*,YouTube
-HOST-KEYWORD,youtube,YouTube
-HOST,yt3.ggpht.com,YouTube
-HOST-SUFFIX,googlevideo.com,YouTube
-HOST-SUFFIX,gvt2.com,YouTube
-HOST-SUFFIX,youtu.be,YouTube
-HOST,youtubei.googleapis.com,YouTube
-HOST-SUFFIX,ytimg.com,YouTube
+; === 2. YouTube (视频流媒体) 规则 - 策略组: YouTube ===
+
+# 1. YouTube 核心域名
+HOST-SUFFIX, youtube.com, YouTube
+HOST-SUFFIX, youtu.be, YouTube         # 短链接域名
+HOST-SUFFIX, youtube-nocookie.com, YouTube # 嵌入式播放器
+
+# 2. 视频流媒体传输的核心域名 (Google Video)
+HOST-SUFFIX, googlevideo.com, YouTube
+
+# 3. YouTube 静态资源和图片
+HOST-SUFFIX, ytimg.com, YouTube       # 视频缩略图、图标
+HOST-SUFFIX, ytimg.l.google.com, YouTube
+HOST-SUFFIX, youtube-ui.l.google.com, YouTube
+HOST-SUFFIX, ytstatic.l.google.com, YouTube
+HOST-SUFFIX, yt3.ggpht.com, YouTube   # 用户头像、频道图标
+
+# 4. YouTube API 和认证
+HOST-SUFFIX, youtubei.googleapis.com, YouTube
+HOST-SUFFIX, youtube.googleapis.com, YouTube
+HOST-SUFFIX, www.youtube.com, YouTube
+HOST-SUFFIX, m.youtube.com, YouTube   # 移动版域名
+
+# 5. 用户代理 (USER-AGENT) 规则
+USER-AGENT, *YouTube*, YouTube
+USER-AGENT, *com.google.ios.youtube*, YouTube # iOS App
+USER-AGENT, *com.google.android.youtube*, YouTube # Android App
