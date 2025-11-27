@@ -1,13 +1,22 @@
-# > NBA
-USER-AGENT,NBA*,NBA
-HOST-KEYWORD,nba,NBA
-HOST-SUFFIX,nba.com,NBA
-HOST-SUFFIX,omtrdc.net,NBA
-HOST-SUFFIX,neulion.com,NBA
-HOST-SUFFIX,branch.io,NBA
-HOST,sb.scorecardresearch.com,NBA
-HOST-SUFFIX,amplitude.com,NBA
-HOST,assets.adobedtm.com,NBA
-HOST-SUFFIX,demdex.net,NBA
-HOST,watchnba.cdnfastly.endeavorstreaming.net,NBA
-HOST,shield-twoproxy.imggaming.com,NBA
+# Quantumult X 远程分流规则 - NBA API/辅助功能优化版
+# 策略: NBA
+# -----------------------------------------------
+
+# === 1. App/网站核心 API 和认证 ===
+HOST-SUFFIX, nba.com, NBA
+HOST-SUFFIX, nbc.com, NBA 
+HOST-SUFFIX, nba.global, NBA
+HOST, watch.nba.com, NBA
+HOST-SUFFIX, nbahosting.com, NBA
+HOST-SUFFIX, neulion.com, NBA            # 您的原始 Neulion 域名
+
+# === 2. 统计、追踪、分析和推送 (您的原始规则已包含) ===
+HOST-SUFFIX, omtrdc.net, NBA
+HOST-SUFFIX, branch.io, NBA
+HOST, sb.scorecardresearch.com, NBA
+HOST-SUFFIX, amplitude.com, NBA
+HOST, assets.adobedtm.com, NBA
+HOST-SUFFIX, demdex.net, NBA
+
+# 3. 用户代理捕获 (App 启动/通用流量)
+USER-AGENT, NBA*, NBA
