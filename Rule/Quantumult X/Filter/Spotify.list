@@ -1,7 +1,39 @@
-# > Spotify
-USER-AGENT,*Spotify*,Spotify
-HOST-SUFFIX,pscdn.co,Spotify
-HOST-SUFFIX,scdn.co,Spotify
-HOST-SUFFIX,spoti.fi,Spotify
-HOST-SUFFIX,spotify.com,Spotify
-HOST-SUFFIX,spotifycdn.net,Spotify
+# Quantumult X 远程分流规则 - Spotify Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Spotify'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Spotify 核心 API 和网站域名
+HOST-SUFFIX, spotify.com, Spotify
+HOST-SUFFIX, spotifycdn.com, Spotify
+HOST-SUFFIX, spotify-labs.com, Spotify
+HOST-SUFFIX, spotify.link, Spotify
+HOST-SUFFIX, spotifycharts.com, Spotify
+
+# 2. 音乐流媒体和内容分发网络 (CDN) 域名
+HOST-SUFFIX, akamaized.net, Spotify
+HOST-SUFFIX, fpcdn.net, Spotify
+HOST-SUFFIX, spoti.fi, Spotify
+HOST-SUFFIX, ps-cdn.net, Spotify
+
+# 3. 登录/认证/支付/静态资源
+HOST-SUFFIX, accounts.spotify.com, Spotify
+HOST-SUFFIX, pay.spotify.com, Spotify
+HOST-SUFFIX, audio-fa.scdn.co, Spotify
+HOST-SUFFIX, audio-ak.scdn.co, Spotify
+HOST-SUFFIX, video-ak.scdn.co, Spotify
+
+# 4. 其他相关服务
+HOST-SUFFIX, scdn.co, Spotify
+
+
+# === B. IP 段 (IP-CIDR) 规则 (可选，优化 App 访问) ===
+# Spotify 依赖 AWS/Akamai/Fastly 等 CDN，以下是部分 IP 段，通常域名匹配已足够。
+
+# Akamai IP (部分)
+# IP-CIDR, 23.208.0.0/13, Spotify
+# IP-CIDR, 96.16.0.0/12, Spotify
