@@ -1,24 +1,47 @@
-# > Netflix
-USER-AGENT,Argo*,Netflix
-HOST-SUFFIX,netflix.com,Netflix
-HOST-SUFFIX,netflix.net,Netflix
-HOST-SUFFIX,nflxext.com,Netflix
-HOST-SUFFIX,nflximg.com,Netflix
-HOST-SUFFIX,nflximg.net,Netflix
-HOST-SUFFIX,nflxso.net,Netflix
-HOST-SUFFIX,nflxvideo.net,Netflix
-IP-CIDR,8.41.4.0/24,Netflix
-IP-CIDR,23.246.0.0/18,Netflix
-IP-CIDR,37.77.184.0/21,Netflix
-IP-CIDR,45.57.0.0/17,Netflix
-IP-CIDR,64.120.128.0/17,Netflix
-IP-CIDR,66.197.128.0/17,Netflix
-IP-CIDR,69.53.224.0/19,Netflix
-IP-CIDR,108.175.32.0/20,Netflix
-IP-CIDR,185.2.220.0/22,Netflix
-IP-CIDR,185.9.188.0/22,Netflix
-IP-CIDR,192.173.64.0/18,Netflix
-IP-CIDR,198.38.96.0/19,Netflix
-IP-CIDR,198.45.48.0/20,Netflix
-IP-CIDR,207.45.72.0/22,Netflix
-IP-CIDR,208.75.76.0/22,Netflix
+# Quantumult X 远程分流规则 - Netflix Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Netflix'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Netflix 核心 API 和网站域名
+HOST-SUFFIX, netflix.com, Netflix
+HOST-SUFFIX, netflix.net, Netflix
+
+# 2. 内容分发网络 (CDN) 域名 (用于视频流传输)
+# Netflix 大部分视频流量会通过 Fastly 或 Akamai 的 IP 地址传输，但域名仍然是关键。
+HOST-SUFFIX, nflxext.com, Netflix
+HOST-SUFFIX, nflximg.net, Netflix
+HOST-SUFFIX, nflxvideo.net, Netflix
+HOST-SUFFIX, nflxso.net, Netflix
+HOST-SUFFIX, nflxcloud.net, Netflix
+
+# 3. 字体/静态资源
+HOST-SUFFIX, netflixdnstest1.com, Netflix
+HOST-SUFFIX, netflixdnstest2.com, Netflix
+
+
+# === B. IP 段 (IP-CIDR) 规则 ===
+# Netflix 视频流主要通过 Akamai 和 Fastly 的 IP 段传输，以下是最常用的范围。
+# 确保您为这些 IP 段选择的策略 (Netflix) 走的是**解锁 Netflix** 的代理节点。
+
+# 1. Fastly CDN (主要用于内容交付)
+IP-CIDR, 108.161.160.0/19, Netflix
+IP-CIDR, 185.2.220.0/22, Netflix
+IP-CIDR, 185.34.108.0/22, Netflix
+IP-CIDR, 185.255.44.0/22, Netflix
+IP-CIDR, 23.246.0.0/18, Netflix
+IP-CIDR, 37.77.184.0/21, Netflix
+IP-CIDR, 45.57.0.0/17, Netflix
+IP-CIDR, 66.248.200.0/21, Netflix
+IP-CIDR, 83.137.184.0/21, Netflix
+
+# 2. IPv6 IP 段 (需添加 no-resolve)
+IP6-CIDR, 2a00:5c40::/29, Netflix, no-resolve
+IP6-CIDR, 2a03:b0c0::/32, Netflix, no-resolve
+IP6-CIDR, 2c0f:f3c0::/32, Netflix, no-resolve
+IP6-CIDR, 2606:b400::/32, Netflix, no-resolve
+IP6-CIDR, 2620:108:7000::/40, Netflix, no-resolve
