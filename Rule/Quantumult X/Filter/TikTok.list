@@ -1,9 +1,9 @@
-# Quantumult X 远程分流规则 - TikTok 优化直播流增强最终版
+# Quantumult X 远程分流规则 - TikTok 优化直播流 IP 增强最终版
 # URL: [您的 GitHub 链接]
 # 更新日期: 2025-11-27
 # 策略说明:
 #   - 文件中所有规则统一指向策略 'TikTok'。
-#   - 包含核心 API、视频流以及增强的直播流域名。
+#   - 启用了 IP-CIDR 规则，以解决直播App切换时的IP直连漏分流问题。
 # -----------------------------------------------
 
 # === A. 纯国际版域名 (策略: TikTok) ===
@@ -19,7 +19,7 @@ HOST-SUFFIX, musically.com, TikTok
 # 2. 视频流媒体传输的核心域名
 HOST-SUFFIX, tiktokv.com, TikTok
 
-# 3. 直播流和实时通信域名 (新增和增强)
+# 3. 直播流和实时通信域名 
 HOST-SUFFIX, live.tiktok.com, TikTok           
 HOST-SUFFIX, live-hls.byteimg.com, TikTok      
 HOST-SUFFIX, live-pull.byteimg.com, TikTok     
@@ -29,10 +29,19 @@ HOST-SUFFIX, liveapi.tiktok.com, TikTok
 HOST-SUFFIX, host-api.tiktokv.com, TikTok 
 
 
-# === B. IP 段规则 (可选) ===
-# 维持原有的 IP 段作为补充。
+# === B. IP 段规则 (已启用并增强) ===
+# 启用 IP 规则可以捕获直播切换时的 IP 直连流量，解决卡顿。
 
-# IP-CIDR, 13.33.0.0/16, TikTok 
-# IP-CIDR, 104.244.40.0/22, TikTok 
-# IP-CIDR, 161.129.0.0/16, TikTok
+# 1. 字节跳动核心 AS IP 段 (重要!)
+IP-CIDR, 104.244.40.0/22, TikTok 
+IP-CIDR, 161.129.0.0/16, TikTok 
+IP-CIDR, 103.243.24.0/22, TikTok
+IP-CIDR, 13.33.0.0/16, TikTok 
 
+# 2. 常用 CDN IP 段 (可能用于海外直播加速)
+IP-CIDR, 18.234.0.0/16, TikTok
+IP-CIDR, 35.190.0.0/16, TikTok
+
+# 3. 启用 IPv6 (如果您的代理支持)
+IP-CIDR, 2400:3200::/32, TikTok, no-resolve
+IP-CIDR, 2400:6180::/32, TikTok, no-resolve
