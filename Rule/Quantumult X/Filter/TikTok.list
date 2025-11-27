@@ -1,43 +1,38 @@
-# Quantumult X 远程分流规则 - TikTok 优化合并最终版
+# Quantumult X 远程分流规则 - TikTok 优化直播流增强最终版
 # URL: [您的 GitHub 链接]
 # 更新日期: 2025-11-27
 # 策略说明:
-#   - DIRECT: 字节跳动共享域名（已注释，默认由其他规则接管）。
-#   - TikTok: 纯国际版域名，确保 TikTok (国际版) 连接海外 API 和 CDN。
+#   - 文件中所有规则统一指向策略 'TikTok'。
+#   - 包含核心 API、视频流以及增强的直播流域名。
 # -----------------------------------------------
 
 # === A. 纯国际版域名 (策略: TikTok) ===
-# 必须走代理，以连接到海外 API 和推荐服务器。
 
+# 1. 核心 API 和网站域名
 HOST-SUFFIX, tiktok.com, TikTok
 HOST-SUFFIX, tiktokcdn.com, TikTok
-HOST-SUFFIX, tiktokv.com, TikTok
 HOST-SUFFIX, byteoversea.com, TikTok
 HOST-SUFFIX, musical.ly, TikTok
-
-# 补充与美国/海外相关的 CDN 及旧域名
 HOST-SUFFIX, tiktokcdn-us.com, TikTok
 HOST-SUFFIX, musically.com, TikTok
 
+# 2. 视频流媒体传输的核心域名
+HOST-SUFFIX, tiktokv.com, TikTok
 
-# === B. 共享域名 (已注释) ===
-# 字节跳动国内和国际版共享。这些规则已被注释 (#)，
-# 其流量将不再被本规则文件中的 DIRECT 策略匹配，
-# 而将由您配置中的下一条匹配规则（如 GEOIP 或 FINAL）接管。
-
-# HOST-SUFFIX, ibytedtos.com, DIRECT
-# HOST-SUFFIX, bytedance.com, DIRECT
-# HOST-SUFFIX, pstatp.com, DIRECT
-# HOST-SUFFIX, toutiaoapi.com, DIRECT
-# HOST-SUFFIX, snssdk.com, DIRECT
-# HOST-SUFFIX, bytego.net, DIRECT
-# HOST-SUFFIX, amemv.com, DIRECT
-# HOST-SUFFIX, byteeffect.com, DIRECT
+# 3. 直播流和实时通信域名 (新增和增强)
+HOST-SUFFIX, live.tiktok.com, TikTok           
+HOST-SUFFIX, live-hls.byteimg.com, TikTok      
+HOST-SUFFIX, live-pull.byteimg.com, TikTok     
+HOST-SUFFIX, live-ws.byteimg.com, TikTok       
+HOST-SUFFIX, webcast.amemv.com, TikTok 
+HOST-SUFFIX, liveapi.tiktok.com, TikTok 
+HOST-SUFFIX, host-api.tiktokv.com, TikTok 
 
 
-# === C. IP 段规则 (策略: TikTok) ===
-# 仅列出国际版可能使用的 IP 段，作为域名解析失败时的补充。
+# === B. IP 段规则 (可选) ===
+# 维持原有的 IP 段作为补充。
 
 # IP-CIDR, 13.33.0.0/16, TikTok 
 # IP-CIDR, 104.244.40.0/22, TikTok 
 # IP-CIDR, 161.129.0.0/16, TikTok
+
