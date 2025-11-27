@@ -10,5 +10,6 @@ IP-CIDR, 161.117.0.0/16, Clubhouse IP
 IP-CIDR, 199.231.0.0/16, Clubhouse IP
 
 # Agora IPv6 IP 段 (需添加 no-resolve)
-IP-CIDR, 2400:3000::/18, Clubhouse IP, no-resolve
-IP-CIDR, 2600:4000::/18, Clubhouse IP, no-resolve
+IP6-CIDR, 2400:3000::/18, Clubhouse IP, no-resolve
+IP6-CIDR, 2600:4000::/18, Clubhouse IP, no-resolve
+
