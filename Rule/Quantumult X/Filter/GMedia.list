@@ -1,3 +1,8 @@
+# =========================================================
+# === GMedia (国际流媒体) - 优化版 ===
+# 策略：GMedia (建议导向海外代理节点)
+# -----------------------------------------------
+
 # > ABC
 HOST-SUFFIX,edgedatg.com,GMedia
 HOST-SUFFIX,go.com,GMedia
@@ -6,11 +11,11 @@ HOST-SUFFIX,go.com,GMedia
 USER-AGENT,AbemaTV*,GMedia
 HOST-SUFFIX,abema.io,GMedia
 HOST-SUFFIX,abema.tv,GMedia
-HOST-SUFFIX,akamaized.net,GMedia
 HOST-SUFFIX,ameba.jp,GMedia
 HOST-SUFFIX,hayabusa.io,GMedia
+; 移除了 HOST-SUFFIX, akamaized.net, GMedia (过于宽泛)
 
-# > Apple News and Apple Map TOMTOM Version
+# > Apple News and Apple Map TOMTOM Version (保持注释)
 # USER-AGENT,AppleNews*,GMedia
 # USER-AGENT,com.apple.news*,GMedia
 # HOST,gspe1-ssl.ls.apple.com,GMedia
@@ -22,11 +27,11 @@ HOST-SUFFIX,hayabusa.io,GMedia
 # HOST,news-events.apple.com,GMedia
 # HOST-SUFFIX,apple.news,GMedia
 
-# > Bahamut
+# > Bahamut (巴哈姆特)
 USER-AGENT,Anime*,GMedia
 HOST-SUFFIX,bahamut.com.tw,GMedia
 HOST-SUFFIX,gamer.com.tw,GMedia
-HOST-SUFFIX,hinet.net,GMedia
+; 移除了 HOST-SUFFIX, hinet.net, GMedia (过于宽泛)
 
 # > BBC iPlayer
 USER-AGENT,BBCiPlayer*,GMedia
@@ -53,8 +58,8 @@ HOST-SUFFIX,intercom.io,GMedia
 # > encoreTVB
 USER-AGENT,encoreTVB*,GMedia
 HOST-SUFFIX,encoretvb.com,GMedia
-HOST,content.jwplatform.com,GMedia
-HOST,videos-f.jwpsrv.com,GMedia
+HOST-SUFFIX,jwplatform.com,GMedia      ; [优化] 替换了 content.jwplatform.com
+HOST-SUFFIX,jwpsrv.com,GMedia          ; [优化] 替换了 videos-f.jwpsrv.com
 
 # > Fox Now
 USER-AGENT,FOX%20NOW*,GMedia
@@ -64,9 +69,9 @@ HOST-SUFFIX,uplynk.com,GMedia
 
 # > Fox+ (HK|TW|SG)
 USER-AGENT,FOXPlus*,GMedia
-HOST-SUFFIX,akamaized.net,GMedia
 HOST-SUFFIX,foxplus.com,GMedia
 HOST-SUFFIX,theplatform.com,GMedia
+; 移除了 HOST-SUFFIX, akamaized.net, GMedia (过于宽泛)
 
 # > HBO NOW & HBO GO
 USER-AGENT,HBO%20NOW*,GMedia
@@ -79,11 +84,11 @@ HOST-SUFFIX,hbogoasia.hk,GMedia
 HOST-SUFFIX,hbonow.com,GMedia
 HOST-SUFFIX,hbomax.com,GMedia
 
-# > Hulu(フールー)
+# > Hulu(フールー) - Japan
 HOST-SUFFIX,happyon.jp,GMedia
 HOST-SUFFIX,hulu.jp,GMedia
 
-# > Hulu
+# > Hulu - US
 HOST-SUFFIX,hulu.com,GMedia
 HOST-SUFFIX,huluim.com,GMedia
 HOST-SUFFIX,hulustream.com,GMedia
@@ -142,9 +147,6 @@ HOST-SUFFIX,soundcloud.com,GMedia
 # > ViuTV
 USER-AGENT,ViuTV*,GMedia
 HOST-SUFFIX,bootstrapcdn.com,GMedia
-HOST-SUFFIX,cloudfront.net,GMedia
-HOST-SUFFIX,cognito-identity.us-east-1.amazonaws.com,GMedia
-HOST-SUFFIX,firebaseio.com,GMedia
 HOST-SUFFIX,jwpcdn.com,GMedia
 HOST-SUFFIX,jwplayer.com,GMedia
 HOST-SUFFIX,mobileanalytics.us-east-1.amazonaws.com,GMedia
@@ -152,6 +154,8 @@ HOST-SUFFIX,nowe.com,GMedia
 HOST-SUFFIX,viu.com,GMedia
 HOST-SUFFIX,viu.tv,GMedia
 HOST-SUFFIX,viu.now.com,GMedia
+; 移除了 HOST-SUFFIX, cloudfront.net, GMedia (过于宽泛)
+; 移除了 HOST-SUFFIX, cognito-identity.us-east-1.amazonaws.com, GMedia (AWS 身份验证)
 
 # > Youtube Music
 USER-AGENT,*YouTubeMusic*,GMedia
