@@ -35,10 +35,11 @@ IP-CIDR, 91.108.20.0/22, Telegram
 IP-CIDR, 91.108.56.0/22, Telegram
 IP-CIDR, 91.108.48.0/22, Telegram
 IP-CIDR, 149.154.160.0/20, Telegram
-IP-CIDR, 2001:b28:f23d::/48, no-resolve, Telegram
-IP-CIDR, 2001:67c:4e8::/48, no-resolve, Telegram
-IP-CIDR, 2001:b28:f23c::/48, Telegram, no-resolve
-IP-CIDR, 2a0a:f280:2000::/40, no-resolve, Telegram
-IP-CIDR, 2a03:f800::/32, no-resolve, Telegram
+IP-CIDR, 2001:b28:f23d::/48, no-resolve
+IP-CIDR, 2001:67c:4e8::/48, no-resolve
+IP-CIDR, 2001:b28:f23c::/48, no-resolve
+IP-CIDR, 2a0a:f280:2000::/40, no-resolve
+IP-CIDR, 2a03:f800::/32, no-resolve
+
 
 
