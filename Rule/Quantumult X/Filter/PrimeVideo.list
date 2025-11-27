@@ -1,20 +1,39 @@
-# > Amazon Prime Video
-USER-AGENT,InstantVideo.US*,Prime Video
-USER-AGENT,Prime%20Video*,Prime Video
-DOMAIN-SUFFIX,aiv-cdn.net,Prime Video
-DOMAIN-SUFFIX,aiv-delivery.net,Prime Video
-DOMAIN-SUFFIX,amazonvideo.com,Prime Video
-DOMAIN-SUFFIX,media-amazon.com,Prime Video
-DOMAIN-SUFFIX,primevideo.com,Prime Video
-DOMAIN-SUFFIX,pv-cdn.net,Prime Video
-DOMAIN,atv-ps.amazon.com,Prime Video
-DOMAIN,fls-na.amazon.com,Prime Video
-DOMAIN,avodmp4s3ww-a.akamaihd.net,Prime Video
-DOMAIN,d25xi40x97liuc.cloudfront.net,Prime Video
-DOMAIN,dmqdd6hw24ucf.cloudfront.net,Prime Video
-DOMAIN,dmqdd6hw24ucf.cloudfront.net,Prime Video
-DOMAIN,d22qjgkvxw22r6.cloudfront.net,Prime Video
-DOMAIN,d1v5ir2lpwr8os.cloudfront.net,Prime Video
-DOMAIN,d27xxe7juh1us6.cloudfront.net,Prime Video
-DOMAIN,www.amazon.com,Prime Video
-DOMAIN-KEYWORD,avoddashs,Prime Video
+# Quantumult X 远程分流规则 - Prime Video 策略最终修正版
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Prime Video'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Prime Video 核心 API 和网站域名
+HOST-SUFFIX, primevideo.com, Prime Video
+HOST-SUFFIX, primevideo.net, Prime Video
+HOST-SUFFIX, amazonvideo.com, Prime Video
+
+# 2. 亚马逊通用域名 (用于认证、登录、购买等)
+HOST-SUFFIX, amazon.com, Prime Video
+HOST-SUFFIX, amazon.co.jp, Prime Video
+HOST-SUFFIX, amazon.co.uk, Prime Video
+HOST-SUFFIX, amazonaws.com, Prime Video
+
+# 3. 内容分发网络 (CDN) 和视频流域名
+HOST-SUFFIX, media-amazon.com, Prime Video
+HOST-SUFFIX, m.media-amazon.com, Prime Video
+HOST-SUFFIX, aiv-cdn.net, Prime Video
+HOST-SUFFIX, aiv-delivery.net, Prime Video
+
+# 4. 静态资源和认证 (如 Cognito, S3)
+HOST-SUFFIX, cloudfront.net, Prime Video
+HOST-SUFFIX, s3.amazonaws.com, Prime Video
+HOST-SUFFIX, akamaized.net, Prime Video
+
+
+# === B. IP 段 (IP-CIDR) 规则 (可选，优化 App 访问) ===
+# Prime Video 视频流主要通过 AWS/CloudFront 的 IP 段传输。
+
+# AWS/CloudFront IP 段示例 (仅供参考，默认注释)
+# IP-CIDR, 13.32.0.0/15, Prime Video
+# IP-CIDR, 52.84.0.0/15, Prime Video
+# IP-CIDR, 54.230.0.0/15, Prime Video
