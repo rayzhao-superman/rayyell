@@ -19,14 +19,14 @@ HOST-SUFFIX, musical.ly, TikTok
 # === B. 共享域名 (策略: DIRECT) ===
 # 字节跳动国内和国际版共享，必须直连，避免影响国内应用流畅度。
 
-HOST-SUFFIX, ibytedtos.com, DIRECT
-HOST-SUFFIX, bytedance.com, DIRECT
-HOST-SUFFIX, pstatp.com, DIRECT
-HOST-SUFFIX, toutiaoapi.com, DIRECT
-HOST-SUFFIX, snssdk.com, DIRECT
-HOST-SUFFIX, bytego.net, DIRECT
-HOST-SUFFIX, amemv.com, DIRECT
-HOST-SUFFIX, byteeffect.com, DIRECT
+# HOST-SUFFIX, ibytedtos.com, DIRECT
+# HOST-SUFFIX, bytedance.com, DIRECT
+# HOST-SUFFIX, pstatp.com, DIRECT
+# HOST-SUFFIX, toutiaoapi.com, DIRECT
+# HOST-SUFFIX, snssdk.com, DIRECT
+# HOST-SUFFIX, bytego.net, DIRECT
+# HOST-SUFFIX, amemv.com, DIRECT
+# HOST-SUFFIX, byteeffect.com, DIRECT
 
 
 # === C. IP 段规则 (策略: TikTok) ===
@@ -35,5 +35,6 @@ HOST-SUFFIX, byteeffect.com, DIRECT
 # IP-CIDR, 13.33.0.0/16, TikTok 
 # IP-CIDR, 104.244.40.0/22, TikTok 
 # IP-CIDR, 161.129.0.0/16, TikTok
+
 
 
