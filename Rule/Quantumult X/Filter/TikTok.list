@@ -43,5 +43,6 @@ IP-CIDR, 18.234.0.0/16, TikTok
 IP-CIDR, 35.190.0.0/16, TikTok
 
 # 3. 启用 IPv6 (如果您的代理支持)
-IP-CIDR, 2400:3200::/32, TikTok, no-resolve
-IP-CIDR, 2400:6180::/32, TikTok, no-resolve
+IP6-CIDR, 2400:3200::/32, TikTok, no-resolve
+IP6-CIDR, 2400:6180::/32, TikTok, no-resolve
+
