@@ -1,5 +1,17 @@
-# > NBA
-HOST,watch.nba.com,NBA
-HOST-SUFFIX,akamaized.net,NBA
-HOST-SUFFIX,akamaihd.net,NBA
-HOST-SUFFIX,easelive.tv,NBA
+# Quantumult X 远程分流规则 - NBA+ 核心视频流优化版
+# 策略: NBA+
+# -----------------------------------------------
+
+# === 1. 视频流媒体核心域名 ===
+HOST-SUFFIX, akamaized.net, NBA+    # Akamai CDN (视频流主要载体)
+HOST-SUFFIX, akamaihd.net, NBA+     # Akamai HD CDN
+HOST-SUFFIX, turnkey.media, NBA+    # 媒体转播/内容交付
+HOST-SUFFIX, easelive.tv, NBA+      # 您的原始流媒体域名
+
+# 2. 精确的视频/内容交付 HOST
+HOST, watchnba.cdnfastly.endeavorstreaming.net, NBA+
+HOST, shield-twoproxy.imggaming.com, NBA+
+HOST, prod-ripcut-delivery.disney-plus.net, NBA+ # 之前Disney+规则中的ripcut，防止混淆
+
+# 3. 核心 API 辅助 (用于视频播放启动)
+HOST-SUFFIX, nba.net, NBA+
