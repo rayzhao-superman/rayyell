@@ -1,3 +1,13 @@
+# Quantumult X 远程分流规则 - CMedia (中国大陆流媒体统一分流) - 最终合并版
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-28
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'CMedia'。
+#   - 包含主流视频、音乐、短视频和知识付费平台。
+# -----------------------------------------------
+
+# === 视频/音频平台 (合并并优化) ===
+
 # > AcFun
 USER-AGENT,AcFun*,CMedia
 HOST-SUFFIX,acfun.cn,CMedia
@@ -5,7 +15,7 @@ HOST-SUFFIX,acfun.com,CMedia
 HOST-SUFFIX,acfun.tv,CMedia
 HOST-SUFFIX,aixifan.com,CMedia
 
-# > Bilibili
+# > Bilibili (B站)
 USER-AGENT,bili*,CMedia
 USER-AGENT,Bilibili*,CMedia
 HOST-SUFFIX,acg.tv,CMedia
@@ -14,14 +24,16 @@ HOST-SUFFIX,b23.tv,CMedia
 HOST-SUFFIX,biliapi.com,CMedia
 HOST-SUFFIX,biliapi.net,CMedia
 HOST-SUFFIX,bilibili.com,CMedia
+HOST-SUFFIX,bilibili.tv,CMedia
 HOST-SUFFIX,biligame.com,CMedia
 HOST-SUFFIX,biligame.net,CMedia
 HOST-SUFFIX,bilivideo.com,CMedia
 HOST-SUFFIX,hdslb.com,CMedia
 HOST-SUFFIX,im9.com,CMedia
 HOST-SUFFIX,smtcdns.net,CMedia
+HOST-SUFFIX,bilibilicomics.com,CMedia
 
-# > iQiyi
+# > iQiyi (爱奇艺)
 USER-AGENT,QIYI*,CMedia
 USER-AGENT,iQiYi*,CMedia
 USER-AGENT,PPStream*,CMedia
@@ -29,36 +41,30 @@ USER-AGENT,QYPlayer*,CMedia
 HOST-SUFFIX,iqiyi.com,CMedia
 HOST-SUFFIX,iqiyipic.com,CMedia
 HOST-SUFFIX,qy.net,CMedia
-HOST-SUFFIX,71.am,CMedia
 
-# > Kugou & Kuwo
+# > Kugou & Kuwo (酷狗/酷我)
 HOST-SUFFIX,kugou.com,CMedia
 USER-AGENT,%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90*,CMedia
 HOST-SUFFIX,kuwo.cn,CMedia
 HOST-SUFFIX,koowo.com,CMedia
 
-# > Letv
-HOST-SUFFIX,api.mob.app.letv.com,CMedia
+# > Letv (乐视)
 HOST-SUFFIX,letv.com,CMedia
 
-# > MGTV
+# > MGTV (芒果TV)
 USER-AGENT,MGTV*,CMedia
 HOST-SUFFIX,hitv.com,CMedia
 HOST-SUFFIX,hunantv.com,CMedia
 HOST-SUFFIX,mgtv.com,CMedia
 
-# > Migu
+# > Migu (咪咕)
 USER-AGENT,MiguVideo*,CMedia
 USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,CMedia
 HOST-SUFFIX,cmvideo.cn,CMedia
 HOST-SUFFIX,migu.cn,CMedia
 HOST-SUFFIX,miguvideo.com,CMedia
 
-# > MOOMusic
-USER-AGENT,MOO*,CMedia
-USER-AGENT,TencentMidasConnect*,CMedia
-
-# > Netease Music
+# > Netease Music (网易云音乐)
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90,CMedia
 USER-AGENT,NeteaseMusic*,CMedia
 HOST,apm.music.163.com,CMedia
@@ -67,6 +73,7 @@ HOST,interface.music.163.com,CMedia
 HOST,interface3.music.163.com,CMedia
 HOST,music.126.net,CMedia
 HOST,music.163.com,CMedia
+; 保留 IP-CIDR 规则，但建议检查其必要性
 IP-CIDR,101.71.154.241/32,CMedia
 IP-CIDR,103.126.92.132/32,CMedia
 IP-CIDR,103.126.92.133/32,CMedia
@@ -87,29 +94,59 @@ IP-CIDR,59.111.181.35/32,CMedia
 IP-CIDR,59.111.181.38/32,CMedia
 IP-CIDR,59.111.181.60/32,CMedia
 
-# > QQMusic
+# > QQMusic (QQ音乐)
 USER-AGENT,QQ%e9%9f%b3%e4%b9%90*,CMedia
 USER-AGENT,QQMusic*,CMedia
 HOST-SUFFIX,music.qq.com,CMedia
 HOST-SUFFIX,y.qq.com,CMedia
 HOST,aqqmusic.tc.qq.com,CMedia
 
-# > Tencent Video
+# > Tencent Video (腾讯视频)
 USER-AGENT,live4iphone*,CMedia
 USER-AGENT,qqlive4iphone*,CMedia
-USER-AGENT,TencentMidasConnect*,CMedia
 HOST-SUFFIX,v.qq.com,CMedia
 HOST-SUFFIX,video.qq.com,CMedia
+HOST-SUFFIX,l.qq.com,CMedia
 
-# > Xiami Music
+# > Xiami Music (虾米音乐 - 仅作兼容)
 USER-AGENT,walkman*,CMedia
 USER-AGENT,xiami*,CMedia
 HOST-SUFFIX,xiami.com,CMedia
 HOST-SUFFIX,xiami.net,CMedia
 
-# > Youku
+# > Youku (优酷)
 USER-AGENT,Youku*,CMedia
 USER-AGENT,%E4%BC%98%E9%85%B7*,CMedia
 HOST-SUFFIX,soku.com,CMedia
 HOST-SUFFIX,youku.com,CMedia
 HOST-SUFFIX,ykimg.com,CMedia
+HOST-SUFFIX,alicdn.com,CMedia
+
+
+# === 新增：短视频与音频平台 ===
+
+# > Douyin (抖音)
+USER-AGENT,Aweme*,CMedia
+USER-AGENT,com.ss.android.ugc.aweme*,CMedia
+HOST-SUFFIX,amemv.com,CMedia
+HOST-SUFFIX,douyin.com,CMedia
+HOST-SUFFIX,douyincdn.com,CMedia
+HOST-SUFFIX,iesdouyin.com,CMedia
+HOST-SUFFIX,snssdk.com,CMedia
+HOST-SUFFIX,pstatp.com,CMedia
+
+# > Kuaishou (快手)
+USER-AGENT,Kwai*,CMedia
+USER-AGENT,Kuaishou*,CMedia
+HOST-SUFFIX,kuaishou.com,CMedia
+HOST-SUFFIX,kwaicdn.com,CMedia
+HOST-SUFFIX,ksyun.com,CMedia
+
+# > Ximalaya & Dedao (喜马拉雅/得到)
+HOST-SUFFIX,ximalaya.com,CMedia
+HOST-SUFFIX,xmcdn.com,CMedia
+HOST-SUFFIX,igetget.com,CMedia
+
+# > Baidu Video (百度视频/好看视频)
+HOST-SUFFIX,baidu.com,CMedia
+HOST-SUFFIX,hao123.com,CMedia
