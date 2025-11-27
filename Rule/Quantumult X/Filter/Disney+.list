@@ -1,18 +1,20 @@
-# > Disney Plus
-USER-AGENT,Disney*,DisneyPlus
-HOST-SUFFIX,disneyplus.com,DisneyPlus
-HOST-SUFFIX,disney-plus.net,DisneyPlus
-HOST-SUFFIX,disneystreaming.com,DisneyPlus
-HOST-SUFFIX,dssott.com,DisneyPlus
-HOST-SUFFIX,bamgrid.com,DisneyPlus
-HOST,disney.my.sentry.io,DisneyPlus
-HOST,disney.api.edge.bamgrid.com,DisneyPlus
-HOST,disney.connections.edge.bamgrid.com,DisneyPlus
-HOST,disney.content.edge.bamgrid.com,DisneyPlus
-HOST,disney.playback.edge.bamgrid.com,DisneyPlus
-HOST,cdn.registerdisney.go.com,DisneyPlus
-HOST-SUFFIX,execute-api.us-east-1.amazonaws.com,DisneyPlus
-HOST-SUFFIX,braze.com,DisneyPlus
-HOST,cdn.cdn.unid.go.com,DisneyPlus
-HOST-SUFFIX,conviva.com,DisneyPlus
-HOST-SUFFIX,disney.demdex.net,DisneyPlus
+# Quantumult X 远程分流规则 - DisneyPlus API/辅助功能优化版
+# 策略: DisneyPlus
+# -----------------------------------------------
+
+# === 1. 核心 API 和认证域名 ===
+HOST-SUFFIX, disneyplus.com, DisneyPlus
+HOST, disney.api.edge.bamgrid.com, DisneyPlus
+HOST, disney.connections.edge.bamgrid.com, DisneyPlus
+HOST, disney.content.edge.bamgrid.com, DisneyPlus
+HOST, cdn.registerdisney.go.com, DisneyPlus
+HOST-SUFFIX, execute-api.us-east-1.amazonaws.com, DisneyPlus
+
+# === 2. 辅助功能和分析/推送 ===
+HOST, disney.my.sentry.io, DisneyPlus        # Sentry 错误追踪
+HOST-SUFFIX, braze.com, DisneyPlus           # 推送通知
+HOST, cdn.cdn.unid.go.com, DisneyPlus
+HOST-SUFFIX, conviva.com, DisneyPlus         # 性能分析
+HOST-SUFFIX, disney.demdex.net, DisneyPlus   # Adobe Analytics
+USER-AGENT, Disney*, DisneyPlus              # App 启动流量
+
