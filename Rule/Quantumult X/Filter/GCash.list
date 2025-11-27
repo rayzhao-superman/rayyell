@@ -1,4 +1,27 @@
-# > GCash
-USER-AGENT,GCash*,GCash
-HOST-SUFFIX,gcash.com,GCash
-HOST-SUFFIX,mynt.xyz,GCash
+# Quantumult X 远程分流规则 - GCash Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'GCash'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. GCash 核心 App API 和网站域名
+HOST-SUFFIX, gcash.com, GCash
+HOST-SUFFIX, gcashapi.com, GCash
+HOST-SUFFIX, mynt.ph, GCash  # GCash母公司Mynt
+
+# 2. 认证和静态资源/CDN
+HOST-SUFFIX, globe.com.ph, GCash       # GCash与Globe电信关联
+HOST-SUFFIX, gcashstatic.com, GCash
+HOST-SUFFIX, gcashpartner.com, GCash
+
+# 3. Cloudflare/AWS 相关的 API 域名 (GCash可能使用的底层服务)
+HOST-SUFFIX, cloudflare.com, GCash  # 如果App使用Cloudflare API
+HOST-SUFFIX, cdn-cgi.com, GCash     # Cloudflare CDN相关
+
+# === B. IP 段 (IP-CIDR) 规则 (可选，优化 App 访问) ===
+# GCash 服务主要在菲律宾，并使用公有云 IP。除非遇到漏分流，否则域名匹配足够。
+# IP-CIDR, 104.18.0.0/15, GCash # 部分Cloudflare CDN
+# IP-CIDR, 172.64.0.0/13, GCash # 部分Cloudflare CDN
