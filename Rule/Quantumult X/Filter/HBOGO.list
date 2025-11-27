@@ -1,8 +1,9 @@
-# Quantumult X 远程分流规则 - HBO GO 策略最终修正版
+# Quantumult X 远程分流规则 - HBO GO App 优化最终版
 # URL: [您的 GitHub 链接]
 # 更新日期: 2025-11-27
 # 策略说明:
 #   - 文件中所有规则统一指向策略 'HBO GO'。
+#   - 已启用 IP-CIDR 和 User-Agent 规则，优化 App 访问。
 # -----------------------------------------------
 
 # === A. 域名 (HOST-SUFFIX) 规则 ===
@@ -23,15 +24,25 @@ HOST-SUFFIX, cbs.co, HBO GO
 HOST-SUFFIX, auth.max.com, HBO GO
 HOST-SUFFIX, cdn.max.com, HBO GO
 
-# === B. IP 段 (IP-CIDR) 规则 (作为补充) ===
-# 维持 Akamai 和 AWS (Cloudfront) 的部分 IP 段，但默认注释掉。
+
+# === B. IP 段 (IP-CIDR) 规则 (已取消注释并启用) ===
+# 优化 App 启动和视频流的 IP 直连。
 
 # Akamai IP (部分)
-# IP-CIDR, 2.22.84.0/24, HBO GO
-# IP-CIDR, 23.208.0.0/13, HBO GO
-# IP-CIDR, 96.16.0.0/12, HBO GO
+IP-CIDR, 2.22.84.0/24, HBO GO
+IP-CIDR, 23.208.0.0/13, HBO GO
+IP-CIDR, 96.16.0.0/12, HBO GO
 
 # AWS Cloudfront (部分)
-# IP-CIDR, 13.32.0.0/15, HBO GO
-# IP-CIDR, 18.156.0.0/14, HBO GO
-# IP-CIDR, 52.84.0.0/15, HBO GO
+IP-CIDR, 13.32.0.0/15, HBO GO
+IP-CIDR, 18.156.0.0/14, HBO GO
+IP-CIDR, 52.84.0.0/15, HBO GO
+
+
+# === C. 用户代理 (USER-AGENT) 规则 (已新增) ===
+# 确保 HBO Max / GO App 自身流量被正确捕获。
+
+USER-AGENT, *HBOMax*, HBO GO
+USER-AGENT, *HBOGO*, HBO GO
+USER-AGENT, *Max*, HBO GO
+USER-AGENT, *com.hbo.hbo*, HBO GO
