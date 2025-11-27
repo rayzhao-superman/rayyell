@@ -8,8 +8,6 @@
 
 # === A. 域名 (HOST-SUFFIX) 规则 ===
 
-; === 3. 国际 Google 核心服务 (详细增强版) - 策略组: Google ===
-
 # 1. 核心服务/搜索/地图/认证
 HOST-SUFFIX, google.com, Google
 HOST-SUFFIX, googleapis.com, Google
