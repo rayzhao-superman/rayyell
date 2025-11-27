@@ -1,35 +1,65 @@
-# > Apple
-USER-AGENT,*com.apple.mobileme.fmip1,Apple
-USER-AGENT,*WeatherFoundation*,Apple
-USER-AGENT,%E5%9C%B0%E5%9B%BE*,Apple
-USER-AGENT,%E6%9F%A5%E6%89%BE*,Apple
-USER-AGENT,%E8%AE%BE%E7%BD%AE*,Apple
-USER-AGENT,AppStore*,Apple
-USER-AGENT,com.apple.appstored*,Apple
-USER-AGENT,com.apple.geod*,Apple
-USER-AGENT,com.apple.Maps,Apple
-USER-AGENT,FindMy*,Apple
-USER-AGENT,FMDClient*,Apple
-USER-AGENT,FMFD*,Apple
-USER-AGENT,fmflocatord*,Apple
-USER-AGENT,geod*,Apple
-USER-AGENT,locationd*,Apple
-USER-AGENT,Maps*,Apple
-USER-AGENT,TestFlight*,Apple
-HOST-SUFFIX,apple.co,Apple
-HOST-SUFFIX,apple.com,Apple
-HOST-SUFFIX,apple.com.cn,Apple
-HOST-SUFFIX,apple-cloudkit.com,Apple
-HOST-SUFFIX,appstore.com,Apple
-HOST-SUFFIX,cdn-apple.com,Apple
-HOST-SUFFIX,crashlytics.com,Apple
-HOST-SUFFIX,icloud.com,Apple
-HOST-SUFFIX,icloud.com.cn,Apple
-HOST-SUFFIX,icloud-content.com,Apple
-HOST-SUFFIX,itunes.com,Apple
-HOST-SUFFIX,me.com,Apple
-HOST-SUFFIX,mzstatic.com,Apple
-HOST,api.smoot.apple.cn,Apple
-HOST,np-edge.itunes.apple.com,Apple
-HOST,play-edge.itunes.apple.com,Apple
-HOST-SUFFIX,tv.apple.com,Apple
+# Quantumult X 远程分流规则 - Apple Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Apple'。
+#   - 您需要在 Quantumult X 中配置 'Apple' 策略组，并将 DIRECT 包含在内。
+# -----------------------------------------------
+
+# === A. 域名 (HOST / HOST-SUFFIX) 规则 ===
+# 注意：以下所有策略均设置为 'Apple'。
+
+# 1. 系统核心/激活/网络检测/推送 (统一走 Apple 策略，由策略组决定是直连还是代理)
+HOST, albert.apple.com, Apple
+HOST, captive.apple.com, Apple
+HOST, gs.apple.com, Apple
+HOST, time-ios.apple.com, Apple
+HOST, time.apple.com, Apple
+HOST-SUFFIX, push.apple.com, Apple
+HOST-SUFFIX, courier.push.apple.com, Apple
+HOST-SUFFIX, mesu.apple.com, Apple
+HOST-SUFFIX, gdmf.apple.com, Apple
+
+# 2. 核心服务与 CDN/App Store/iCloud
+HOST-SUFFIX, apple.co, Apple
+HOST-SUFFIX, apple.com, Apple
+HOST-SUFFIX, apple.com.cn, Apple
+HOST-SUFFIX, apple-cloudkit.com, Apple
+HOST-SUFFIX, appstore.com, Apple
+HOST-SUFFIX, cdn-apple.com, Apple
+HOST-SUFFIX, icloud.com, Apple
+HOST-SUFFIX, icloud.com.cn, Apple
+HOST-SUFFIX, icloud-content.com, Apple
+HOST-SUFFIX, itunes.com, Apple
+HOST-SUFFIX, me.com, Apple
+HOST-SUFFIX, mzstatic.com, Apple
+HOST-SUFFIX, tv.apple.com, Apple
+HOST-SUFFIX, apple-mapkit.com, Apple
+HOST-SUFFIX, i-a-i.net, Apple
+HOST-SUFFIX, crashlytics.com, Apple
+
+# 3. 完整域名 (HOST) 匹配
+HOST, api.smoot.apple.cn, Apple
+HOST, np-edge.itunes.apple.com, Apple
+HOST, play-edge.itunes.apple.com, Apple
+
+
+# === B. 用户代理 (User Agent) 规则 ===
+
+USER-AGENT, *com.apple.mobileme.fmip1, Apple
+USER-AGENT, *WeatherFoundation*, Apple
+USER-AGENT, %E5%9C%B0%E5%9B%BE*, Apple
+USER-AGENT, %E6%9F%A5%E6%89%BE*, Apple
+USER-AGENT, %E8%AE%BE%E7%BD%AE*, Apple
+USER-AGENT, AppStore*, Apple
+USER-AGENT, com.apple.appstored*, Apple
+USER-AGENT, com.apple.geod*, Apple
+USER-AGENT, com.apple.Maps, Apple
+USER-AGENT, FindMy*, Apple
+USER-AGENT, FMDClient*, Apple
+USER-AGENT, FMFD*, Apple
+USER-AGENT, fmflocatord*, Apple
+USER-AGENT, geod*, Apple
+USER-AGENT, locationd*, Apple
+USER-AGENT, Maps*, Apple
+USER-AGENT, TestFlight*, Apple
