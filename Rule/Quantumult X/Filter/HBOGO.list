@@ -1,21 +1,37 @@
-# > HBO Asia
-USER-AGENT,HBO%20GO%20PROD*,HBO GO
-DOMAIN-SUFFIX,hbogoasia.com,HBO GO
-DOMAIN-SUFFIX,hbogoasia.hk,HBO GO
-DOMAIN-KEYWORD,.hbogoasia.,HBO GO
-DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,HBO GO
-DOMAIN,bcbolthboa-a.akamaihd.net,HBO GO
-DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,HBO GO
-DOMAIN,dai3fd1oh325y.cloudfront.net,HBO GO
-DOMAIN,hboasia1-i.akamaihd.net,HBO GO
-DOMAIN,hboasia2-i.akamaihd.net,HBO GO
-DOMAIN,hboasia3-i.akamaihd.net,HBO GO
-DOMAIN,hboasia4-i.akamaihd.net,HBO GO
-DOMAIN,hboasia5-i.akamaihd.net,HBO GO
-DOMAIN,hboasialive.akamaized.net,HBO GO
-DOMAIN,hbogoprod-vod.akamaized.net,HBO GO
-DOMAIN,hbolb.onwardsmg.com,HBO GO
-DOMAIN,hbounify-prod.evergent.com,HBO GO
-DOMAIN,players.brightcove.net,HBO GO
-DOMAIN,s3-ap-southeast-1.amazonaws.com,HBO GO
-DOMAIN-SUFFIX,appsflyer.com,HBO GO
+# Quantumult X 远程分流规则 - HBO GO 策略最终修正版
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'HBO GO'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. 核心 API 和网站域名 (涵盖 HBO GO / Max / Max)
+HOST-SUFFIX, hbomax.com, HBO GO
+HOST-SUFFIX, max.com, HBO GO
+HOST-SUFFIX, hbo.com, HBO GO
+
+# 2. 内容分发网络 (CDN) 域名 (用于视频流传输)
+HOST-SUFFIX, hbobf.net, HBO GO
+HOST-SUFFIX, hbodc.net, HBO GO
+HOST-SUFFIX, nr-data.net, HBO GO
+HOST-SUFFIX, nrdp.net, HBO GO
+HOST-SUFFIX, cbs.co, HBO GO
+
+# 3. 登录/认证/静态资源
+HOST-SUFFIX, auth.max.com, HBO GO
+HOST-SUFFIX, cdn.max.com, HBO GO
+
+# === B. IP 段 (IP-CIDR) 规则 (作为补充) ===
+# 维持 Akamai 和 AWS (Cloudfront) 的部分 IP 段，但默认注释掉。
+
+# Akamai IP (部分)
+# IP-CIDR, 2.22.84.0/24, HBO GO
+# IP-CIDR, 23.208.0.0/13, HBO GO
+# IP-CIDR, 96.16.0.0/12, HBO GO
+
+# AWS Cloudfront (部分)
+# IP-CIDR, 13.32.0.0/15, HBO GO
+# IP-CIDR, 18.156.0.0/14, HBO GO
+# IP-CIDR, 52.84.0.0/15, HBO GO
