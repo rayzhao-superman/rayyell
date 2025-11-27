@@ -1,38 +1,14 @@
-# > ClubhouseIP
-IP-CIDR, 3.0.163.0/24,ClubhouseIP
-IP-CIDR, 13.230.60.0/24,ClubhouseIP
-IP-CIDR, 23.98.43.0/24,ClubhouseIP
-IP-CIDR, 23.248.191.0/24,ClubhouseIP
-IP-CIDR, 35.155.231.0/24,ClubhouseIP
-IP-CIDR, 35.168.106.0/24,ClubhouseIP
-IP-CIDR, 35.178.208.0/24,ClubhouseIP
-IP-CIDR, 45.40.48.0/24,ClubhouseIP
-IP-CIDR, 45.255.124.0/24,ClubhouseIP
-IP-CIDR, 50.17.126.0/24,ClubhouseIP
-IP-CIDR, 50.18.128.0/24,ClubhouseIP
-IP-CIDR, 52.52.84.0/24,ClubhouseIP
-IP-CIDR, 52.58.56.0/24,ClubhouseIP
-IP-CIDR, 52.194.158.0/24,ClubhouseIP
-IP-CIDR, 52.221.46.0/24,ClubhouseIP
-IP-CIDR, 54.178.26.0/24,ClubhouseIP
-IP-CIDR, 103.65.41.0/24,ClubhouseIP
-IP-CIDR, 103.98.18.0/24,ClubhouseIP
-IP-CIDR, 103.123.127.0/24,ClubhouseIP
-IP-CIDR, 103.193.127.0/24,ClubhouseIP
-IP-CIDR, 103.211.230.0/24,ClubhouseIP
-IP-CIDR, 128.1.87.0/24,ClubhouseIP
-IP-CIDR, 129.227.57.0/24,ClubhouseIP
-IP-CIDR, 120.227.115.0/24,ClubhouseIP
-IP-CIDR, 129.227.71.0/24,ClubhouseIP
-IP-CIDR, 129.227.115.0/24,ClubhouseIP
-IP-CIDR, 130.65.41.0/24,ClubhouseIP
-IP-CIDR, 148.153.145.0/24,ClubhouseIP
-IP-CIDR, 148.153.172.0/24,ClubhouseIP
-IP-CIDR, 154.86.157.0/24,ClubhouseIP
-IP-CIDR, 164.52.0.0/24,ClubhouseIP
-IP-CIDR, 164.52.6.0/24,ClubhouseIP
-IP-CIDR, 164.52.32.0/24,ClubhouseIP
-IP-CIDR, 164.52.102.0/24,ClubhouseIP
-IP-CIDR, 164.52.124.0/24,ClubhouseIP
-IP-CIDR, 199.190.44.0/24,ClubhouseIP
-IP-CIDR, 202.226.25.0/24,ClubhouseIP
+# Clubhouse 远程分流规则 - IP部分 (策略: Clubhouse IP)
+# -----------------------------------------------
+
+# Agora 核心 IP 段 (主要用于实时语音/流媒体)
+IP-CIDR, 47.90.0.0/16, Clubhouse IP
+IP-CIDR, 103.40.246.0/24, Clubhouse IP
+IP-CIDR, 103.40.247.0/24, Clubhouse IP
+IP-CIDR, 120.92.0.0/16, Clubhouse IP
+IP-CIDR, 161.117.0.0/16, Clubhouse IP
+IP-CIDR, 199.231.0.0/16, Clubhouse IP
+
+# Agora IPv6 IP 段 (需添加 no-resolve)
+IP-CIDR, 2400:3000::/18, Clubhouse IP, no-resolve
+IP-CIDR, 2600:4000::/18, Clubhouse IP, no-resolve
