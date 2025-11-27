@@ -8,12 +8,14 @@
 
 # === A. 域名 (HOST-SUFFIX) 规则 ===
 
-# 1. Google 核心服务/搜索/地图/认证
+; === 3. 国际 Google 核心服务 (详细增强版) - 策略组: Google ===
+
+# 1. 核心服务/搜索/地图/认证
 HOST-SUFFIX, google.com, Google
 HOST-SUFFIX, googleapis.com, Google
 HOST-SUFFIX, gstatic.com, Google         # Google 静态内容和核心库
 HOST-SUFFIX, gvt1.com, Google            # Google 软件更新和内容分发
-HOST-SUFFIX, accounts.google.com, Google # 登录和认证
+HOST-SUFFIX, g.co, Google                # Google 缩址
 
 # 2. Gmail / Google Workspace (Drive, Docs, Sheets)
 HOST-SUFFIX, gmail.com, Google
@@ -21,34 +23,49 @@ HOST-SUFFIX, googleusercontent.com, Google # 用户内容和Drive
 HOST-SUFFIX, googledrive.com, Google
 HOST-SUFFIX, drive.google.com, Google
 HOST-SUFFIX, docs.google.com, Google
+HOST-SUFFIX, sheets.google.com, Google
+HOST-SUFFIX, forms.google.com, Google
+HOST-SUFFIX, groups.google.com, Google
+HOST-SUFFIX, hangouts.google.com, Google
 
-# 3. App Engine/Cloud Services
+# 3. 登录/账户/认证
+HOST-SUFFIX, accounts.google.com, Google
+HOST-SUFFIX, googlecode.com, Google      # 旧版服务/认证
+HOST-SUFFIX, android.com, Google         # 安卓设备认证与更新
+HOST-SUFFIX, android-dev.com, Google
+
+# 4. Google 地图 / API / 字体
+HOST-SUFFIX, googlemaps.com, Google
+HOST-SUFFIX, maps.google.com, Google
+HOST-SUFFIX, ggpht.com, Google            # Google Photos, Maps (用户生成内容)
+HOST-SUFFIX, fonts.gstatic.com, Google   # Google 字体静态资源
+HOST-SUFFIX, fonts.googleapis.com, Google # Google 字体API
+
+# 5. Play 商店/软件更新 (App Store, Downloads)
+HOST-SUFFIX, gcr.io, Google              # Google Container Registry
+HOST-SUFFIX, googleplay.com, Google
+HOST-SUFFIX, play.google.com, Google
+HOST-SUFFIX, dl.google.com, Google       # 下载服务
+
+# 6. 分析/广告/营销 (Analysis, Ads, Marketing)
+HOST-SUFFIX, google-analytics.com, Google
+HOST-SUFFIX, googlesyndication.com, Google
+HOST-SUFFIX, googleadservices.com, Google
+HOST-SUFFIX, googletagmanager.com, Google
+HOST-SUFFIX, doubleclick.net, Google
+HOST-SUFFIX, g.doubleclick.net, Google
+HOST-SUFFIX, 2mdn.net, Google
+HOST-SUFFIX, ytimg.com, Google            # YouTube 缩略图/静态资源 (注意: 此处为静态图，非视频流)
+
+# 7. 云服务/开发者工具 (App Engine, Firebase, Cloud)
 HOST-SUFFIX, appspot.com, Google
 HOST-SUFFIX, firebaseio.com, Google
 HOST-SUFFIX, firebaseapp.com, Google
+HOST-SUFFIX, apigee.net, Google
+HOST-SUFFIX, cloud.google.com, Google
+HOST-SUFFIX, gcr.io, Google
+HOST-SUFFIX, cloudfunctions.net, Google
 
-# 4. 其他 Google 国际服务
-HOST-SUFFIX, goo.gl, Google              # 缩址服务
-HOST-SUFFIX, g.co, Google
-HOST-SUFFIX, 2mdn.net, Google            # 广告和分析相关
-
-# 5. DNS/时间同步/网络检测
+# 8. 时间同步/网络检测 (通常直连，但此处统一)
 HOST, connectivitycheck.gstatic.com, Google
-HOST, www.google.com, Google
 HOST, time.android.com, Google
-
-
-# === B. 用户代理 (USER-AGENT) 规则 (排除 YouTube) ===
-USER-AGENT, *GoogleDrive*, Google
-USER-AGENT, *Gmail*, Google
-# 排除 YouTube User-Agent
-
-
-# === C. IP 段 (IP-CIDR) 规则 (可选) ===
-# 建议仅用于补充，以避免与 YouTube 视频流 IP 段冲突。
-
-# 常用 Google IP 段
-# IP-CIDR, 74.125.0.0/16, Google
-# IP-CIDR, 172.217.0.0/16, Google
-# IP-CIDR, 209.85.0.0/16, Google
-# IP-CIDR, 216.58.200.0/24, Google
