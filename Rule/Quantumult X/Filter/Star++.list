@@ -1,3 +1,15 @@
-# > StarPlus+
-// 此条分流只是让 Star+ 串流时走 US 节点，需搭配 Star+ 相关分流使用
-HOST-SUFFIX,media.starott.com,StarPlus+
+# Quantumult X 远程分流规则 - StarPlus+ 核心视频流优化版
+# 策略: StarPlus+
+# -----------------------------------------------
+
+# === 1. Star+ 核心视频流域名 (与 Disney+ 共享技术栈) ===
+HOST-SUFFIX, starplus.com, StarPlus+
+HOST-SUFFIX, starplus.net, StarPlus+
+HOST-SUFFIX, stardisneyplus.com, StarPlus+ 
+HOST-SUFFIX, disneystreaming.net, StarPlus+  # 核心流媒体基础设施
+HOST-SUFFIX, bamgrid.com, StarPlus+          # 核心流媒体技术平台
+
+# 2. 视频内容交付 (Content Delivery) 域名
+HOST-SUFFIX, dssott.com, StarPlus+
+HOST-SUFFIX, akamaized.net, StarPlus+        # Akamai CDN (流媒体主要载体)
+HOST-SUFFIX, akamaihd.net, StarPlus+
