@@ -1,13 +1,42 @@
-HOST-KEYWORD,telegram,Telegram
-# > Telegram
-HOST-SUFFIX,t.me,Telegram
-HOST-SUFFIX,tdesktop.com,Telegram
-HOST-SUFFIX,telegra.ph,Telegram
-HOST-SUFFIX,telegram.me,Telegram
-HOST-SUFFIX,telegram.org,Telegram
-IP-CIDR,91.108.0.0/16,Telegram
-IP-CIDR,109.239.140.0/24,Telegram
-IP-CIDR,149.154.160.0/20,Telegram
-IP6-CIDR,2001:67c:4e8::/48,Telegram
-IP6-CIDR,2001:b28:f23d::/48,Telegram
-IP6-CIDR,2001:b28:f23f::/48,Telegram
+# Quantumult X 远程分流规则 - Telegram Uniform List
+# URL: [您的 GitHub 链接]
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Telegram'。
+#   - 您需要在 Quantumult X 中配置 'Telegram' 策略组。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. 核心 API/Web/CDN 域名
+HOST-SUFFIX, t.me, Telegram
+HOST-SUFFIX, telegram.org, Telegram
+HOST-SUFFIX, telegraph.co, Telegram
+HOST-SUFFIX, telesco.pe, Telegram
+HOST-SUFFIX, telegram-cdn.org, Telegram
+HOST-SUFFIX, telegram-cdn.xyz, Telegram
+HOST-SUFFIX, telegra.ph, Telegram
+HOST-SUFFIX, nicegram.app, Telegram
+HOST-SUFFIX, th-cdn.xyz, Telegram
+
+# 2. 国际化域名 (可能用于某些地区)
+HOST-SUFFIX, tlgrm.eu, Telegram
+HOST-SUFFIX, tx.me, Telegram
+
+
+# === B. IP 段 (IP-CIDR) 规则 ===
+# Telegram 的 IP 段较为固定，这是确保连接的关键。
+
+# Telegram 核心数据中心 IP 范围（全球）
+IP-CIDR, 91.108.4.0/22, Telegram
+IP-CIDR, 91.108.8.0/22, Telegram
+IP-CIDR, 91.108.12.0/22, Telegram
+IP-CIDR, 91.108.16.0/22, Telegram
+IP-CIDR, 91.108.20.0/22, Telegram
+IP-CIDR, 91.108.56.0/22, Telegram
+IP-CIDR, 91.108.48.0/22, Telegram
+IP-CIDR, 149.154.160.0/20, Telegram
+IP-CIDR, 2001:b28:f23d::/48, Telegram, no-resolve
+IP-CIDR, 2001:67c:4e8::/48, Telegram, no-resolve
+IP-CIDR, 2001:b28:f23c::/48, Telegram, no-resolve
+IP-CIDR, 2a0a:f280:2000::/40, Telegram, no-resolve
+IP-CIDR, 2a03:f800::/32, Telegram, no-resolve
