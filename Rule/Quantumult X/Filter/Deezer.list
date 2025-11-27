@@ -1,10 +1,32 @@
-# > Deezer
-USER-AGENT,Deezer*,Deezer
-DOMAIN-SUFFIX,deezer.com,Deezer
-DOMAIN-SUFFIX,dzcdn.net,Deezer
-DOMAIN-SUFFIX,sentry.io,Deezer
-DOMAIN-SUFFIX,dn9.biz,Deezer
-DOMAIN-SUFFIX,img.cdn.house,Deezer
-DOMAIN-SUFFIX,script.crazyegg.com,Deezer
-DOMAIN-SUFFIX,mparticle.com,Deezer
-DOMAIN-SUFFIX,app.adjust.com,Deezer
+# Quantumult X 远程分流规则 - Deezer Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'Deezer'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Deezer 核心 API 和网站域名
+HOST-SUFFIX, deezer.com, Deezer
+HOST-SUFFIX, deezer.fr, Deezer
+HOST-SUFFIX, dzcdn.net, Deezer           # Deezer CDN
+
+# 2. 内容认证、播放 API 和静态资源
+HOST-SUFFIX, api.deezer.com, Deezer
+HOST-SUFFIX, media.deezer.com, Deezer
+HOST-SUFFIX, cdn-images.deezer.com, Deezer
+HOST-SUFFIX, cdn.dzcdn.net, Deezer
+HOST-SUFFIX, e-cdn-images.dzcdn.net, Deezer
+
+# 3. 音乐流媒体和内容分发网络 (CDN) 域名
+HOST-SUFFIX, dzr.fm, Deezer             # 短链接/跳转
+HOST-SUFFIX, akamaized.net, Deezer      # Akamai CDN (常用)
+
+
+# === B. IP 段 (IP-CIDR) 规则 (可选，优化 App 访问) ===
+# Deezer 主要使用大型 CDN，通常域名匹配已足够。
+
+# Akamai IP (部分)
+# IP-CIDR, 23.208.0.0/13, Deezer
+# IP-CIDR, 96.16.0.0/12, Deezer
