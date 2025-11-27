@@ -1,18 +1,40 @@
-# NAME: ParamountPlus
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:50
-# HOST: 4
-# HOST-SUFFIX: 5
-# USER-AGENT: 1
-# TOTAL: 10
-HOST,cbsi.live.ott.irdeto.com,ParamountPlus
-HOST,cbsplaylistserver.aws.syncbak.com,ParamountPlus
-HOST,cbsservice.aws.syncbak.com,ParamountPlus
-HOST,link.theplatform.com,ParamountPlus
-HOST-SUFFIX,cbsaavideo.com,ParamountPlus
-HOST-SUFFIX,cbsi.com,ParamountPlus
-HOST-SUFFIX,cbsivideo.com,ParamountPlus
-HOST-SUFFIX,paramountplus.com,ParamountPlus
-HOST-SUFFIX,pplusstatic.com,ParamountPlus
-USER-AGENT,PPlus*,ParamountPlus
+# Quantumult X 远程分流规则 - Paramount+ Uniform List
+# URL: [您的 GitHub 链接]
+# 更新日期: 2025-11-27
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'ParamountPlus'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. Paramount+ 核心 API 和网站域名
+HOST-SUFFIX, paramountplus.com, ParamountPlus
+HOST-SUFFIX, cbs.com, ParamountPlus
+HOST-SUFFIX, showtime.com, ParamountPlus  # Showtime 已合并到 Paramount+
+
+# 2. 内容分发网络 (CDN) 域名 (用于视频流传输)
+HOST-SUFFIX, cbsivideo.com, ParamountPlus
+HOST-SUFFIX, paramount.tech, ParamountPlus
+HOST-SUFFIX, pplusapi.com, ParamountPlus
+HOST-SUFFIX, v.iheart.com, ParamountPlus
+HOST-SUFFIX, cloudfront.net, ParamountPlus # 部分内容可能通过 Cloudfront CDN
+
+# 3. 静态资源/认证
+HOST-SUFFIX, theplatform.com, ParamountPlus
+HOST-SUFFIX, viacomcbs.io, ParamountPlus
+HOST-SUFFIX, ad.viacomcbs.tech, ParamountPlus
+
+
+# === B. IP 段 (IP-CIDR) 规则 (可选，优化 App 访问) ===
+# 主要依赖 Akamai/Cloudflare/AWS 的 IP 段。推荐启用以优化 App 访问。
+
+# Akamai IP (部分)
+IP-CIDR, 23.208.0.0/13, ParamountPlus
+IP-CIDR, 96.16.0.0/12, ParamountPlus
+
+# Cloudflare IP (部分)
+IP-CIDR, 104.20.0.0/14, ParamountPlus
+IP-CIDR, 104.24.0.0/14, ParamountPlus
+
+# IPv6 IP 段 (需添加 no-resolve)
+# IP-CIDR, 2606:4700::/32, ParamountPlus, no-resolve
