@@ -1,14 +1,39 @@
-# > TikTok
-USER-AGENT,TikTok*,TikTok
-HOST-SUFFIX,byteoversea.com,TikTok
-HOST-SUFFIX,ibytedtos.com,TikTok
-HOST-SUFFIX,ipstatp.com,TikTok
-HOST-SUFFIX,muscdn.com,TikTok
-HOST-SUFFIX,musical.ly,TikTok
-HOST-SUFFIX,tiktok.com,TikTok
-HOST-SUFFIX,tik-tokapi.com,TikTok
-HOST-SUFFIX,tiktokcdn.com,TikTok
-HOST-SUFFIX,tiktokv.com,TikTok
-HOST-SUFFIX,tiktokv.us,TikTok
-HOST-KEYWORD,-tiktokcdn-com,TikTok
-HOST-SUFFIX,tiktokcdn-us.com,TikTok
+# Quantumult X 远程分流规则 - TikTok Uniform List
+# URL: [您的 GitHub 链接]
+# 策略说明:
+#   - 文件中所有规则统一指向策略 'TikTok'。
+# -----------------------------------------------
+
+# === A. 域名 (HOST-SUFFIX) 规则 ===
+
+# 1. TikTok 核心 API/应用域名
+HOST-SUFFIX, tiktok.com, TikTok
+HOST-SUFFIX, ibytedtos.com, TikTok
+HOST-SUFFIX, bytedance.com, TikTok
+HOST-SUFFIX, musical.ly, TikTok
+HOST-SUFFIX, tiktokcdn.com, TikTok
+
+# 2. 视频/图片 CDN 域名 (TikTok 的主要流量来源)
+HOST-SUFFIX, tiktokv.com, TikTok
+HOST-SUFFIX, pstatp.com, TikTok
+HOST-SUFFIX, toutiaoapi.com, TikTok
+
+# 3. 登录/认证/社交功能相关域名
+HOST-SUFFIX, bytego.net, TikTok
+HOST-SUFFIX, snssdk.com, TikTok
+
+# 4. 其他相关服务 (如广告、分析)
+HOST-SUFFIX, amemv.com, TikTok
+HOST-SUFFIX, byteoversea.com, TikTok
+HOST-SUFFIX, byteeffect.com, TikTok
+
+
+# === B. IP 段 (IP-CIDR) 规则 ===
+# TikTok 的 IP 段主要属于字节跳动、AWS 或其他 CDN。
+# 依赖域名解析通常比手动维护 IP 更稳定。
+# 仅列出一些常见的或与核心 CDN 相关的 IP 段作为参考（可选）：
+
+# IP-CIDR, 13.33.0.0/16, TikTok  # AWS Cloudfront (部分 CDN)
+# IP-CIDR, 104.244.40.0/22, TikTok # 常用 CDN
+# IP-CIDR, 161.129.0.0/16, TikTok # Bytedance AS
+
