@@ -1,5 +1,21 @@
 payload:
-  # > GCash
-  - DOMAIN-KEYWORD,gcash
+  # > GCash (菲律宾移动钱包 - 指向 GCash 策略组)
+  # ----------------------------------------------------
+  # 核心服务域名
   - DOMAIN-SUFFIX,gcash.com
-  - DOMAIN-SUFFIX,mynt.xyz
+  - DOMAIN-SUFFIX,gcash.com.ph
+  - DOMAIN-SUFFIX,mynt.com.ph # Mynt 是 GCash 的运营商
+
+  # API/CDN/静态资源
+  - DOMAIN-SUFFIX,gogcash.com
+  - DOMAIN-SUFFIX,gogcash.com.ph
+  - DOMAIN-SUFFIX,gcsh.app
+  
+  # 用于发送验证码/通知的短信服务或第三方集成
+  - DOMAIN-SUFFIX,nexmo.com 
+  
+  # ----------------------------------------------------
+  # IP-CIDR (针对主要的流量服务商和云服务，例如 AWS/GCP 菲律宾区域，可选)
+  # 注意：IP规则变动快，请谨慎使用。以下为常见云服务商的菲律宾/东南亚节点IP段，仅作示例。
+  - IP-CIDR,13.250.0.0/16,no-resolve  # 亚马逊云服务 (AWS) 新加坡/东南亚部分
+  - IP-CIDR,34.120.0.0/14,no-resolve  # Google 云平台 (GCP) 亚太部分
