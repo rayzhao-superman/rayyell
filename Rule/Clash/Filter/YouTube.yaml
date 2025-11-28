@@ -1,12 +1,38 @@
-payload:  
-  # > YouTube 油管服务器
-  - PROCESS-NAME,com.google.android.youtube
-  - PROCESS-NAME,com.google.android.youtube.tv
+payload:
+  # ====================================================
+  # > YouTube 油管服务器 (视频流与核心 CDN)
+  # ----------------------------------------------------
+
+  # 1. 应用程序进程名 (Process Name)
+  # ----------------------------------------------------
+  - PROCESS-NAME,com.google.android.youtube        # YouTube App
+  - PROCESS-NAME,com.google.android.youtube.tv     # YouTube TV App
+  - PROCESS-NAME,com.google.android.apps.youtube.kids # 新增: YouTube Kids
+  - PROCESS-NAME,com.google.android.apps.youtube.music # 新增: YouTube Music
+  
+  # 2. 核心域名与 API (Core Domains & API)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,youtube.com                      # 核心主站
+  - DOMAIN-SUFFIX,youtu.be                         # 短链接
+  - DOMAIN-SUFFIX,youtube.com.tw                   # 新增: 区域域名
+  - DOMAIN-SUFFIX,youtube-nocookie.com             # 新增: 无 Cookie 嵌入式播放器
+  - DOMAIN-SUFFIX,youtubei.googleapis.com          # 核心 API (您提供的)
+  - DOMAIN-SUFFIX,yt.be                            # 新增: YouTube 短链接
+
+  # 3. 媒体流与内容交付网络 (CDN & Streaming)
+  #    - 用于传输实际视频数据的域名
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,googlevideo.com                  # 视频数据流 (极重要)
+  - DOMAIN,yt3.ggpht.com                         # 频道头像、缩略图等静态内容 (您提供的)
+  - DOMAIN-SUFFIX,ytimg.com                        # 静态资源、图片
+  - DOMAIN-SUFFIX,gvt2.com                         # 核心 CDN (您提供的)
+  - DOMAIN-SUFFIX,gvt4.com                         # 新增: 核心 CDN (常见补充)
+
+  # 4. YouTube Music 专属域名
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,music.youtube.com                # 新增: YouTube Music 网站
+  - DOMAIN-SUFFIX,ytm.app.goo.gl                   # 新增: YouTube Music 短链接
+
+  # 5. 通用关键词 (作为兜底)
+  # ----------------------------------------------------
   - DOMAIN-KEYWORD,youtube
-  - DOMAIN,youtubei.googleapis.com
-  - DOMAIN,yt3.ggpht.com
-  - DOMAIN-SUFFIX,youtube.com
-  - DOMAIN-SUFFIX,googlevideo.com
-  - DOMAIN-SUFFIX,gvt2.com
-  - DOMAIN-SUFFIX,youtu.be
-  - DOMAIN-SUFFIX,ytimg.com
