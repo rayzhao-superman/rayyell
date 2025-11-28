@@ -1,5 +1,11 @@
 payload:
-  # Internet Service Providers Hijacking
+  # ====================================================
+  # > 运营商劫持与恶意流量屏蔽 (ISP Hijacking & Malware REJECT)
+  # ----------------------------------------------------
+
+  # 1. 互联网服务提供商劫持域名 (ISP Hijacking Domains)
+  #    - 这些域名通常用于插入广告、推广或虚假信息。
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,17gouwuba.com
   - DOMAIN-SUFFIX,186078.com
   - DOMAIN-SUFFIX,189key.com
@@ -117,11 +123,16 @@ payload:
   - DOMAIN-SUFFIX,zmlled.cn
   - DOMAIN-SUFFIX,zunmi.cn
   - DOMAIN-SUFFIX,zzd6.com
+
+  # 2. 运营商劫持 IP (Hijacking IP Addresses)
+  # ----------------------------------------------------
+  # 通用 IP 劫持
   - IP-CIDR,39.107.15.115/32,no-resolve
   - IP-CIDR,47.89.59.182/32,no-resolve
   - IP-CIDR,103.49.209.27/32,no-resolve
   - IP-CIDR,123.56.152.96/32,no-resolve
-  # > ChinaTelecom
+
+  # 中国电信 (ChinaTelecom)
   - IP-CIDR,61.160.200.223/32,no-resolve
   - IP-CIDR,61.160.200.242/32,no-resolve
   - IP-CIDR,61.160.200.252/32,no-resolve
@@ -140,17 +151,20 @@ payload:
   - IP-CIDR,222.186.61.95/32,no-resolve
   - IP-CIDR,222.186.61.96/32,no-resolve
   - IP-CIDR,222.186.61.97/32,no-resolve
-  # > ChinaUnicom
+
+  # 中国联通 (ChinaUnicom)
   - IP-CIDR,106.75.231.48/32,no-resolve
   - IP-CIDR,119.4.249.166/32,no-resolve
   - IP-CIDR,220.196.52.141/32,no-resolve
   - IP-CIDR,221.6.4.148/32,no-resolve
-  # > ChinaMobile
+
+  # 中国移动 (ChinaMobile)
   - IP-CIDR,114.247.28.96/32,no-resolve
   - IP-CIDR,120.240.95.37/32,no-resolve
   - IP-CIDR,221.179.131.72/32,no-resolve
   - IP-CIDR,221.179.140.145/32,no-resolve
-  # > Dr.Peng
+
+  # 鹏博士/长城宽带 (Dr.Peng/Great Wall Broadband)
   - IP-CIDR,115.182.16.79/32,no-resolve
   - IP-CIDR,118.144.88.126/32,no-resolve
   - IP-CIDR,118.144.88.215/32,no-resolve
@@ -164,22 +178,24 @@ payload:
   - IP-CIDR,220.115.251.25/32,no-resolve
   - IP-CIDR,222.73.156.235/32,no-resolve
 
-  # Malware
-  # > Huawei AspiegelBot
+  # 3. 恶意软件与捆绑推广 (Malware and Scamware)
+  # ----------------------------------------------------
+  
+  # 华为 AspiegelBot (爬虫/服务)
   - IP-CIDR,114.119.160.0/21,no-resolve
-  # > KuaiZip
-  # https://zhuanlan.zhihu.com/p/39534279
+
+  # 快压 (KuaiZip) - 捆绑软件
   - DOMAIN-SUFFIX,kuaizip.com
-  # > MacKeeper
-  # https://www.lizhi.io/blog/40002904
+
+  # MacKeeper - 虚假安全软件
   - DOMAIN-SUFFIX,mackeeper.com
   - DOMAIN-SUFFIX,zryydi.com
-  # > Adobe Flash China Special Edition
-  # https://www.zhihu.com/question/281163698/answer/441388130
+
+  # Adobe Flash 中国特供版 (含广告/推广)
   - DOMAIN-SUFFIX,flash.cn
   - DOMAIN,geo2.adobe.com
-  # > C&J Marketing
-  # https://www.zhihu.com/question/46746200
+
+  # C&J Marketing (数码荔枝等软件代理/推广，可能不需要 REJECT，但这里保留其推广域名)
   - DOMAIN-SUFFIX,4009997658.com
   - DOMAIN-SUFFIX,abbyychina.com
   - DOMAIN-SUFFIX,alienskins.cn
