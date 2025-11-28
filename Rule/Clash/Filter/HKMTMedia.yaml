@@ -1,22 +1,50 @@
 payload:
-  # > HKMTMedia 香港媒体服务器
-  - DOMAIN-KEYWORD,qiyi
-  - DOMAIN-SUFFIX,qy.net
-  - IP-CIDR,101.227.0.0/16
-  - IP-CIDR,101.224.0.0/13
-  - IP-CIDR,119.176.0.0/12
-  - DOMAIN-SUFFIX,acg.tv
-  - DOMAIN-SUFFIX,acgvideo.com
-  - DOMAIN-SUFFIX,b23.tv
+  # ====================================================
+  # > HKMTMedia (香港/台湾媒体服务器 - 优化版)
+  # ----------------------------------------------------
+  
+  # 1. 爱奇艺 (iQiyi) - 确保解锁港澳台内容
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,iqiyi.com         # 核心域名
+  - DOMAIN-SUFFIX,iqiyipic.com      # 图片和静态资源
+  - DOMAIN-SUFFIX,qiyi.com          # 旧域名，保留
+  - DOMAIN-SUFFIX,qiyipic.com       # 图片 CDN
+  - DOMAIN-SUFFIX,qy.net            # 您的原始规则
+  # 已移除 DOMAIN-KEYWORD,qiyi (效率低)
+
+  # 2. 哔哩哔哩 (Bilibili) - 用于分流国际版或港澳台内容
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,b23.tv            # 短链接
   - DOMAIN-SUFFIX,biliapi.com
   - DOMAIN-SUFFIX,biliapi.net
   - DOMAIN-SUFFIX,bilibili.com
   - DOMAIN-SUFFIX,biligame.com
   - DOMAIN-SUFFIX,biligame.net
   - DOMAIN-SUFFIX,bilivideo.com
-  - DOMAIN-SUFFIX,hdslb.com
-  - DOMAIN-SUFFIX,im9.com
-  - DOMAIN-SUFFIX,smtcdns.net
+  - DOMAIN-SUFFIX,hdslb.com         # B站主要 CDN
+  - DOMAIN-SUFFIX,im9.com           # 旧的 B站相关域名
+  - DOMAIN-SUFFIX,smtcdns.net       # B站 CDN (SMTC)
+  # 已移除 DOMAIN-SUFFIX,acg.tv (已废弃)
+  - DOMAIN-SUFFIX,bilibili.tv       # 新增: 国际版域名 (可选)
+
+  # 3. 巴哈姆特 (Bahamut) - 台湾动画疯
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,bahamut.com.tw
   - DOMAIN-SUFFIX,gamer.com.tw
-  - DOMAIN-SUFFIX,hinet.net
+  # 注意：巴哈姆特的视频流通常在 hinet.net 的 CDN 上，
+  # 我们不匹配整个 hinet.net，而是依赖精确域名或 IP 规则 (如果有的话)。
+
+  # 4. IP-CIDR (针对港澳台 CDN IP)
+  # ----------------------------------------------------
+  # ⚠️ 警告：以下 IP 段属于中国大陆运营商 (电信/联通/移动)，
+  # 如果您的目标是解锁“港澳台媒体”，请确保它们不会被分流到 Proxy 策略组。
+  # 强制走代理可能导致国内资源访问失败。
+  # 建议将其策略改为 DIRECT 或从 HKMTMedia 规则集中移除。
+  
+  # - IP-CIDR,101.227.0.0/16      # 属于 CN
+  # - IP-CIDR,101.224.0.0/13      # 属于 CN
+  # - IP-CIDR,119.176.0.0/12      # 属于 CN
+
+  # 建议：如果需要 IP 规则，应添加香港/台湾的 IP 段，例如：
+  # IP-CIDR,203.205.128.0/19,no-resolve  # 腾讯云香港
+  # IP-CIDR,104.20.0.0/14,no-resolve      # Cloudflare 台湾/香港
