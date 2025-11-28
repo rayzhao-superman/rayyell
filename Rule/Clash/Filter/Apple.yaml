@@ -1,20 +1,30 @@
 payload:
-  # Apple
-  - DOMAIN-SUFFIX,aaplimg.com
-  - DOMAIN-SUFFIX,apple.co
-  - DOMAIN-SUFFIX,apple.com
-  - DOMAIN-SUFFIX,apple.com.cn
-  - DOMAIN-SUFFIX,apple-cloudkit.com
-  - DOMAIN-SUFFIX,appstore.com
-  - DOMAIN-SUFFIX,cdn-apple.com
-  - DOMAIN-SUFFIX,icloud.com
-  - DOMAIN-SUFFIX,icloud.com.cn
-  - DOMAIN-SUFFIX,icloud-content.com
-  - DOMAIN-SUFFIX,me.com
-  - DOMAIN-SUFFIX,mzstatic.com
-  - DOMAIN-KEYWORD,apple.com.akadns.net
-  - DOMAIN-KEYWORD,icloud.com.akadns.net
+  # ----------------------------------------------------
+  # 1. 核心服务域名 (DOMAIN-SUFFIX)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,aaplimg.com         # 图片 CDN
+  - DOMAIN-SUFFIX,appstore.com        # App Store
+  - DOMAIN-SUFFIX,cdn-apple.com       # 通用 CDN
+  - DOMAIN-SUFFIX,icloud-content.com  # iCloud 内容
+  - DOMAIN-SUFFIX,icloud.com          # iCloud 核心
+  - DOMAIN-SUFFIX,icloud.com.cn       # 国区 iCloud
+  - DOMAIN-SUFFIX,me.com              # Apple/iCloud 旧域名
+  - DOMAIN-SUFFIX,mzstatic.com        # App Store 静态资源
+  
+  # ----------------------------------------------------
+  # 2. 通用域名 (确保覆盖性)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,apple.co            # 短链接
+  - DOMAIN-SUFFIX,apple.com.cn        # 国区主站
+  - DOMAIN-SUFFIX,apple.com           # 国际主站
+  
+  # ----------------------------------------------------
+  # 3. 核心 IP 段 (IP-CIDR) - 精简后只保留关键段
+  # ----------------------------------------------------
+  # 核心 IP 段，覆盖 Apple 绝大部分服务。
   - IP-CIDR,17.0.0.0/8,no-resolve
+  
+  # 其它关键的非 17.0.0.0/8 IP 段（需保持）
   - IP-CIDR,63.92.224.0/19,no-resolve
   - IP-CIDR,65.199.22.0/23,no-resolve
   - IP-CIDR,139.178.128.0/18,no-resolve
@@ -22,3 +32,9 @@ payload:
   - IP-CIDR,192.35.50.0/24,no-resolve
   - IP-CIDR,198.183.17.0/24,no-resolve
   - IP-CIDR,205.180.175.0/24,no-resolve
+  
+  # ----------------------------------------------------
+  # 4. 移除的规则 (低效/冗余)
+  # ----------------------------------------------------
+  # 已移除 DOMAIN-KEYWORD,apple.com.akadns.net 
+  # 已移除 DOMAIN-KEYWORD,icloud.com.akadns.net
