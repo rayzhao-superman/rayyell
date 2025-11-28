@@ -1,11 +1,25 @@
 payload:
-  # > Twitter 推特服务器
-  - DOMAIN-SUFFIX,pscp.tv
-  - DOMAIN-SUFFIX,periscope.tv
-  - DOMAIN-SUFFIX,t.co
-  - DOMAIN-SUFFIX,twimg.co
-  - DOMAIN-SUFFIX,twimg.com
-  - DOMAIN-SUFFIX,twitpic.com
-  - DOMAIN-SUFFIX,twitter.com
-  - DOMAIN-SUFFIX,twitter.jp
-  - DOMAIN-SUFFIX,vine.co
+  # ====================================================
+  # > Twitter / X 核心服务与媒体流
+  # ----------------------------------------------------
+
+  # 1. 核心域名 (Core Domains)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,twitter.com             # 核心主站 (保留，即使更名为 X，很多链接仍在用)
+  - DOMAIN-SUFFIX,twitter.jp              # 日本地区
+  - DOMAIN-SUFFIX,x.com                   # 新增: X 平台核心主域名 (新品牌)
+  
+  # 2. 短链接与附属服务 (Short Links & Affiliates)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,t.co                    # 官方短链接服务 (极重要)
+  - DOMAIN-SUFFIX,twitpic.com             # 图片分享服务
+  - DOMAIN-SUFFIX,vine.co                 # 旧视频服务 (保留)
+  
+  # 3. 媒体流与内容交付网络 (CDN & Media)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,twimg.co                # Twitter 官方 CDN
+  - DOMAIN-SUFFIX,twimg.com               # Twitter 官方 CDN
+  - DOMAIN-SUFFIX,twimg.com.tw            # 新增: 台湾地区 CDN
+  - DOMAIN-SUFFIX,pscp.tv                 # Periscope (直播服务)
+  - DOMAIN-SUFFIX,periscope.tv            # Periscope
+
