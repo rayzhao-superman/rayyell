@@ -1,6 +1,20 @@
 payload:
-  # Privacy
-  # > Google
-  - DOMAIN,safebrowsing.googleapis.com
-  # > Tencent
-  - DOMAIN,safebrowsing.urlsec.qq.com
+  # ====================================================
+  # > Privacy 隐私保护 (用于分流敏感连接或阻止数据收集)
+  # ----------------------------------------------------
+
+  # 1. 安全浏览与恶意软件检查 (Safe Browsing & Anti-Malware)
+  #    - 这些服务会将您访问的 URL 发送给提供商。
+  # ----------------------------------------------------
+  - DOMAIN,safebrowsing.googleapis.com  # Google 安全浏览
+  - DOMAIN,safebrowsing.urlsec.qq.com   # 腾讯 URL 安全
+  - DOMAIN-SUFFIX,metrics.apple.com     # 新增: 苹果度量数据 (Analytics)
+  - DOMAIN-SUFFIX,diag.windows.com      # 新增: 微软诊断数据 (Windows Diagnostics)
+  
+  # 2. 通用遥测与诊断数据 (General Telemetry & Diagnostics)
+  #    - 用于收集应用崩溃、性能等数据的服务。
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,crashlytics.com       # 新增: Google 旗下崩溃报告服务
+  - DOMAIN-SUFFIX,amplitude.com         # 新增: 常见第三方分析工具
+  - DOMAIN-SUFFIX,flurry.com            # 新增: 常见第三方分析工具
+  - DOMAIN-SUFFIX,loggly.com            # 新增: 常见第三方日志服务
