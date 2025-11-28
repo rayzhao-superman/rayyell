@@ -1,6 +1,18 @@
 payload:
-  # > NBA 流量服务器
-  - DOMAIN,watch.nba.com
-  - DOMAIN-SUFFIX,akamaized.net
-  - DOMAIN-SUFFIX,akamaihd.net
-  - DOMAIN-SUFFIX,easelive.tv
+  # > NBAMedia (视频流与 CDN - 指向 NBAMedia 策略组)
+  # ----------------------------------------------------
+  # 视频流与内容交付网络 (CDN)
+  - DOMAIN-SUFFIX,hls.nba.com
+  - DOMAIN-SUFFIX,vod.nba.com
+  - DOMAIN-SUFFIX,akamai.net
+  - DOMAIN-SUFFIX,akamaistream.net
+  
+  # 腾讯体育 (NBA 在中国大陆的流媒体合作伙伴，可能需要单独处理)
+  - DOMAIN-SUFFIX,qq.com             # 如果您的全局规则没有 DIRECT qq.com，则需要在此处分流
+  - DOMAIN-SUFFIX,tencent.com
+  - DOMAIN-SUFFIX,gtimg.com          # 腾讯 CDN
+  
+  # 通用流媒体 CDN (用于内容分发，建议走代理)
+  - DOMAIN-KEYWORD,nba-cdn
+  - DOMAIN-KEYWORD,nba.akamai
+  - DOMAIN-KEYWORD,nba-hls
