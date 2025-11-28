@@ -1,13 +1,21 @@
 payload:
-  # > NBA 服务器
-  # - DOMAIN-KEYWORD,nba
+  # > NBA (核心服务与 API - 指向 NBA 策略组)
+  # ----------------------------------------------------
+  # 核心域名 (官方网站、商店、API)
   - DOMAIN-SUFFIX,nba.com
-  - DOMAIN-SUFFIX,omtrdc.net
-  - DOMAIN-SUFFIX,neulion.com
-  - DOMAIN-SUFFIX,branch.io
-  - DOMAIN,sb.scorecardresearch.com
-  - DOMAIN-SUFFIX,amplitude.com
-  - DOMAIN,assets.adobedtm.com
-  - DOMAIN,dpm.demdex.net
-  - DOMAIN,watchnba.cdnfastly.endeavorstreaming.net
-  - DOMAIN,shield-twoproxy.imggaming.com
+  - DOMAIN-SUFFIX,nbcsports.com
+  - DOMAIN-SUFFIX,nba.net
+  - DOMAIN-SUFFIX,nba.org
+  - DOMAIN-SUFFIX,nbaevents.com
+  
+  # 认证与数据 API
+  - DOMAIN-SUFFIX,akamaized.net       # 认证和数据 API 广泛使用 Akamai (由于范围过大，如果其他规则集未包含，可以保留)
+  - DOMAIN-SUFFIX,cdn.nba.com
+  - DOMAIN-SUFFIX,cloud.nba.com
+  - DOMAIN-SUFFIX,stats.nba.com
+  - DOMAIN-SUFFIX,global.nba.com
+  - DOMAIN-SUFFIX,leaguepass.nba.com  # League Pass 登录和验证
+  - DOMAIN-SUFFIX,id.nba.com
+  - DOMAIN-SUFFIX,secure.nba.com
+  - DOMAIN-SUFFIX,api.nba.com
+  - DOMAIN-SUFFIX,data.nba.com
