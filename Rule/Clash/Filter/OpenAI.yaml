@@ -1,46 +1,63 @@
-# NAME: OpenAI
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:20:00
-# DOMAIN: 7
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 24
-# IP-ASN: 1
-# IP-CIDR: 2
-# TOTAL: 35
 payload:
-  - DOMAIN,browser-intake-datadoghq.com
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net
-  - DOMAIN,openai-api.arkoselabs.com
-  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+  # ====================================================
+  # > OpenAI / ChatGPT 核心服务 (Optimized)
+  # ----------------------------------------------------
+
+  # 1. OpenAI 核心平台与内容 (Core Platform & Content)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,openai.com          # 核心主站/API
+  - DOMAIN-SUFFIX,chatgpt.com         # ChatGPT 主界面
+  - DOMAIN-SUFFIX,ai.com              # 短链接/跳转
+  - DOMAIN-SUFFIX,oaistatic.com       # 静态资源/图片
+  - DOMAIN-SUFFIX,oaiusercontent.com  # 用户上传内容/生成内容
+  
+  # 2. Azure CDN / Blob (内容交付与数据存储)
+  # ----------------------------------------------------
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,production-openaicom-storage.azureedge.net
-  - DOMAIN,static.cloudflareinsights.com
-  - DOMAIN-SUFFIX,ai.com
-  - DOMAIN-SUFFIX,algolia.net
-  - DOMAIN-SUFFIX,api.statsig.com
-  - DOMAIN-SUFFIX,auth0.com
-  - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,chatgpt.livekit.cloud
-  - DOMAIN-SUFFIX,client-api.arkoselabs.com
-  - DOMAIN-SUFFIX,events.statsigapi.net
-  - DOMAIN-SUFFIX,featuregates.org
-  - DOMAIN-SUFFIX,host.livekit.cloud
-  - DOMAIN-SUFFIX,identrust.com
-  - DOMAIN-SUFFIX,intercom.io
-  - DOMAIN-SUFFIX,intercomcdn.com
-  - DOMAIN-SUFFIX,launchdarkly.com
-  - DOMAIN-SUFFIX,oaistatic.com
-  - DOMAIN-SUFFIX,oaiusercontent.com
-  - DOMAIN-SUFFIX,observeit.net
-  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
   - DOMAIN-SUFFIX,openaicom.imgix.net
-  - DOMAIN-SUFFIX,segment.io
-  - DOMAIN-SUFFIX,sentry.io
-  - DOMAIN-SUFFIX,stripe.com
+  - DOMAIN-SUFFIX,identrust.com       # 证书服务
+  
+  # 3. 认证 / 安全验证 (Auth / Security - Arkose Labs, Auth0)
+  # ----------------------------------------------------
+  - DOMAIN,openai-api.arkoselabs.com  # Arkose Labs 核心 (反机器人验证码)
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com
+  - DOMAIN-SUFFIX,auth0.com           # Auth0 身份验证服务
+  
+  # 4. WebRTC / 语音通话 (Livekit)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,chatgpt.livekit.cloud
+  - DOMAIN-SUFFIX,host.livekit.cloud
   - DOMAIN-SUFFIX,turn.livekit.cloud
-  - DOMAIN-KEYWORD,openai
+  
+  # 5. 分析 / 监控 / 支付 (Analytics & Payment)
+  # ----------------------------------------------------
+  - DOMAIN,browser-intake-datadoghq.com
+  - DOMAIN-SUFFIX,api.statsig.com     # Statsig (特性旗标/分析)
+  - DOMAIN-SUFFIX,events.statsigapi.net
+  - DOMAIN-SUFFIX,featuregates.org    # 特性旗标
+  - DOMAIN-SUFFIX,launchdarkly.com    # LaunchDarkly (特性旗标)
+  - DOMAIN-SUFFIX,intercom.io         # 聊天客服
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,segment.io          # 数据分析
+  - DOMAIN-SUFFIX,sentry.io           # 错误监控
+  - DOMAIN-SUFFIX,stripe.com          # 支付服务
+  - DOMAIN-SUFFIX,algolia.net         # 搜索服务
+  - DOMAIN-SUFFIX,observeit.net       # 监控/审计
+
+  # 6. 边缘节点与 CDN (Cloudflare)
+  # ----------------------------------------------------
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net
+  - DOMAIN,static.cloudflareinsights.com
+  
+  # 7. IP & ASN 规则
+  # ----------------------------------------------------
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
-  - IP-ASN,20473
+  - IP-ASN,20473                      # 亚马逊云服务 (AWS)
+
+  # 8. 泛关键词 (已精简，保留一个作为兜底)
+  # ----------------------------------------------------
+  # 已移除 DOMAIN-KEYWORD,openai (冗余，大部分已被 DOMAIN-SUFFIX 覆盖)
