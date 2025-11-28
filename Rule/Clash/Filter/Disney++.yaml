@@ -1,4 +1,23 @@
 payload:
-  # > Disney++
-  - DOMAIN-SUFFIX,media.dssott.com
-  - DOMAIN,prod-ripcut-delivery.disney-plus.net
+  # > DisneyPlus (核心服务与API - 指向 DisneyPlus 策略组)
+  # ----------------------------------------------------
+  # 核心服务域名
+  - DOMAIN-SUFFIX,disneyplus.com
+  - DOMAIN-SUFFIX,disneyplus.cn
+  - DOMAIN-SUFFIX,disneylife.com
+  - DOMAIN-SUFFIX,dssott.com
+  - DOMAIN-SUFFIX,prod.dssott.com
+  - DOMAIN-SUFFIX,starplus.com       # Star+ (拉美地区流媒体)
+  
+  # API / 认证 / 登录
+  - DOMAIN-SUFFIX,adobedtm.com       # Adobe DTM (分析与标签管理)
+  - DOMAIN-SUFFIX,bamgrid.com        # BAMTech (流媒体技术核心)
+  - DOMAIN-SUFFIX,disneystreaming.net # Disney Streaming Services
+  - DOMAIN-SUFFIX,edge.bamgrid.com
+  - DOMAIN-SUFFIX,disney.demdex.net
+  - DOMAIN-SUFFIX,disney.io
+  - DOMAIN-SUFFIX,disney.com
+  - DOMAIN-SUFFIX,dssapi.com
+  - DOMAIN-SUFFIX,hulu.com           # Hulu (部分地区Disney+包含Hulu内容)
+  - DOMAIN-SUFFIX,huluim.com
+  - DOMAIN-SUFFIX,hulu.tv
