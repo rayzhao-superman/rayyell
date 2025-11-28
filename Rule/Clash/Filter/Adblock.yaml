@@ -1,16 +1,35 @@
 payload:
-  # > PeacockTV
+  # ----------------------------------------------------
+  # > PeacockTV (广告和追踪)
+  # ----------------------------------------------------
+  # 核心广告模块
   - DOMAIN,video-ads-module.ad-tech.nbcuni.com
+  # 广告域名后缀
+  - DOMAIN-SUFFIX,ad.nbcuni.com
+  - DOMAIN-SUFFIX,ads.nbcuni.com
+  # 第三方追踪/同步
+  - DOMAIN-SUFFIX,sync.tapd.info
 
-  # > Tencent
-  # DOMAIN,btrace.qq.com
-  # DOMAIN,mtrace.qq.com
-  - DOMAIN-KEYWORD,adstats
-  - DOMAIN,adstats.tencentmusic.com
-
-  # > Viu
-  - DOMAIN,r2---sn-j5o76n7e.gvt1.com
-
-  # > WeTV
+  # ----------------------------------------------------
+  # > Tencent / QQ / WeTV (广告和追踪)
+  # ----------------------------------------------------
+  # 腾讯追踪/监控域名
+  - DOMAIN,btrace.qq.com
+  - DOMAIN,mtrace.qq.com
+  - DOMAIN-SUFFIX,beacon.qq.com
+  
+  # WeTV 追踪/监控域名
   - DOMAIN,btrace.wetvinfo.com
   - DOMAIN,mtrace.wetvinfo.com
+  
+  # 广告相关域名
+  - DOMAIN-KEYWORD,adstats # 保留关键字匹配
+  - DOMAIN,adstats.tencentmusic.com
+  - DOMAIN-SUFFIX,adtag.qq.com
+  - DOMAIN-SUFFIX,adstats.com
+  - DOMAIN-SUFFIX,tcm-ad.com
+
+  # ----------------------------------------------------
+  # > Viu (无明显的独立广告域名，其广告通常嵌入在视频流中，或使用通用域名)
+  # ----------------------------------------------------
+  # Viu 的核心流媒体/CDN 域名（如 gvt1.com）是必需的，不应 REJECT。
