@@ -1,10 +1,15 @@
 payload:
-  # > Star+
-  # USER-AGENT,Star+
-  # PROCESS-NAME,com.disney.starplus
-  - DOMAIN-SUFFIX,starplus.com
-  - DOMAIN-SUFFIX,starott.com
-  - DOMAIN,star.api.edge.bamgrid.com
-  - DOMAIN,star.connections.edge.bamgrid.com
-  - DOMAIN,star.content.edge.bamgrid.com
-  - DOMAIN,star.playback.edge.bamgrid.com
+  # ====================================================
+  # > StarPlus (核心服务与 API - 指向 StarPlus 策略组)
+  # ----------------------------------------------------
+  
+  # 核心域名与认证
+  - DOMAIN-SUFFIX,starplus.com          # Star+ 核心域名
+  - DOMAIN-SUFFIX,starott.com           # 基础 OTT 域名
+  - DOMAIN-SUFFIX,star.com              # 备用域名/短链
+
+  # 认证、API 与数据
+  - DOMAIN-SUFFIX,star-api.com
+  - DOMAIN-SUFFIX,star-ssl.com          # 安全连接/认证
+  - DOMAIN-SUFFIX,dssott.com            # 迪士尼 OTT 认证 (与 Disney+ 共享)
+  - DOMAIN-SUFFIX,starott-stats.com     # 统计/性能数据
