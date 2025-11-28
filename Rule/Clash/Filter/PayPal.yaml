@@ -1,6 +1,21 @@
 payload:
-  # > PayPal
-  - PROCESS-NAME,com.paypal.android.p2pmobile
+  # ====================================================
+  # > PayPal 核心服务与支付 (Core Services & Payment)
+  # ----------------------------------------------------
+
+  # 1. 核心域名与 API
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,paypal.com
-  - DOMAIN-SUFFIX,paypal.me
-  - DOMAIN-SUFFIX,paypalobjects.com
+  - DOMAIN-SUFFIX,paypal.me             # 个人收款链接
+  - DOMAIN-SUFFIX,paypal-here.com       # 新增: PayPal Here 商家服务
+  - DOMAIN-SUFFIX,paypalobjects.com     # 静态资源、图片、前端组件
+  
+  # 2. Braintree 支付网关 (PayPal 旗下，常见于 App 内支付)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,braintree-api.com     # 新增: Braintree API 接口
+  - DOMAIN-SUFFIX,braintreegateway.com  # 新增: Braintree 支付网关
+  - DOMAIN-SUFFIX,venmo.com             # 新增: Venmo (与 PayPal 关联的转账服务)
+  
+  # 3. 应用程序进程 (Android)
+  # ----------------------------------------------------
+  - PROCESS-NAME,com.paypal.android.p2pmobile
