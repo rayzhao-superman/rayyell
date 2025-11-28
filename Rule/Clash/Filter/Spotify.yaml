@@ -1,8 +1,27 @@
 payload:
-  - PROCESS-NAME,com.spotify.music
-  - DOMAIN-SUFFIX,pscdn.co
-  - DOMAIN-SUFFIX,scdn.co
-  - DOMAIN-SUFFIX,spotify.com
-  - DOMAIN-SUFFIX,spoti.fi
-  - DOMAIN-KEYWORD,spotify.com
-  - DOMAIN-KEYWORD,-spotify-com
+  # ====================================================
+  # > Spotify 声田 (核心服务与媒体流)
+  # ----------------------------------------------------
+
+  # 1. 核心域名与 API
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,spotify.com           # 核心服务、认证、Web 播放器
+  - DOMAIN-SUFFIX,spoti.fi              # 短链接/跳转
+  - DOMAIN-SUFFIX,spotifycdn.com        # 新增: 核心 CDN (常用于 App 内容)
+  - DOMAIN-SUFFIX,audio-fa.scdn.co      # 新增: 媒体流 (Fastly CDN)
+  - DOMAIN-SUFFIX,audio-ak-spotify.com  # 新增: 媒体流 (Akamai CDN)
+  
+  # 2. CDN 和静态资源
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,pscdn.co              # 媒体流/CDN 节点
+  - DOMAIN-SUFFIX,scdn.co               # 媒体流/CDN 节点
+  - DOMAIN-SUFFIX,byspotify.com         # 新增: 博客/营销等相关网站
+  
+  # 3. 通用关键词 (作为兜底)
+  # ----------------------------------------------------
+  - DOMAIN-KEYWORD,spotify
+  
+  # 4. 进程名 (桌面客户端/App)
+  # ----------------------------------------------------
+  - PROCESS-NAME,Spotify.exe
+  - PROCESS-NAME,Spotify
