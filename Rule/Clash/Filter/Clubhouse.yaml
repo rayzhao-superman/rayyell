@@ -1,7 +1,20 @@
 payload:
-  # > Clubhouse 服务器
-   - DOMAIN-SUFFIX,clubhouseapi.com
-   - DOMAIN-SUFFIX,joinclubhouse.com
-   - DOMAIN,clubhouseprod.s3.amazonaws.com
-   - DOMAIN,clubhouse.pubnub.com
-   - DOMAIN-KEYWORD,clubhouse
+  # > Clubhouse 服务器 (优化版)
+  # ----------------------------------------------------
+  # 1. 核心服务域名 (DOMAIN-SUFFIX)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,clubhouseapi.com
+  - DOMAIN-SUFFIX,joinclubhouse.com
+
+  # 2. 实时通讯服务 (PubNub - 保持连接稳定)
+  # 建议使用 DOMAIN-SUFFIX 确保所有 PubNub 节点被捕获
+  - DOMAIN-SUFFIX,pubnub.com
+  
+  # 3. 静态资源/存储 (Amazon S3)
+  - DOMAIN,clubhouseprod.s3.amazonaws.com
+  # (可选：如果 Clubhouse 还有其他 AWS 资源，可以增加更通用的规则，但一般不建议)
+
+  # ----------------------------------------------------
+  # 移除的规则 (低效/冗余)
+  # ----------------------------------------------------
+  # 已移除 DOMAIN-KEYWORD,clubhouse
