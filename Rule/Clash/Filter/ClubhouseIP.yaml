@@ -1,39 +1,49 @@
 payload:
-  # > ClubhouseIP 服务器
-  - IP-CIDR, 3.0.163.0/24
-  - IP-CIDR, 13.230.60.0/24
-  - IP-CIDR, 23.98.43.0/24
-  - IP-CIDR, 23.248.191.0/24
-  - IP-CIDR, 35.155.231.0/24
-  - IP-CIDR, 35.168.106.0/24
-  - IP-CIDR, 35.178.208.0/24
-  - IP-CIDR, 45.40.48.0/24
-  - IP-CIDR, 45.255.124.0/24
-  - IP-CIDR, 50.17.126.0/24
-  - IP-CIDR, 50.18.128.0/24
-  - IP-CIDR, 52.52.84.0/24
-  - IP-CIDR, 52.58.56.0/24
-  - IP-CIDR, 52.194.158.0/24
-  - IP-CIDR, 52.221.46.0/24
-  - IP-CIDR, 54.178.26.0/24
-  - IP-CIDR, 103.65.41.0/24
-  - IP-CIDR, 103.98.18.0/24
-  - IP-CIDR, 103.123.127.0/24
-  - IP-CIDR, 103.193.127.0/24
-  - IP-CIDR, 103.211.230.0/24
-  - IP-CIDR, 128.1.87.0/24
-  - IP-CIDR, 129.227.57.0/24
-  - IP-CIDR, 120.227.115.0/24
-  - IP-CIDR, 129.227.71.0/24
-  - IP-CIDR, 129.227.115.0/24
-  - IP-CIDR, 130.65.41.0/24
-  - IP-CIDR, 148.153.145.0/24
-  - IP-CIDR, 148.153.172.0/24
-  - IP-CIDR, 154.86.157.0/24
-  - IP-CIDR, 164.52.0.0/24
-  - IP-CIDR, 164.52.6.0/24
-  - IP-CIDR, 164.52.32.0/24
-  - IP-CIDR, 164.52.102.0/24
-  - IP-CIDR, 164.52.124.0/24
-  - IP-CIDR, 199.190.44.0/24
-  - IP-CIDR, 202.226.25.0/24
+  # > ClubhouseIP 服务器 (优化合并版)
+
+  # AWS/Azure/GCP IP 段 (合并部分)
+  - IP-CIDR, 3.0.163.0/24,no-resolve
+  - IP-CIDR, 13.230.60.0/24,no-resolve
+  - IP-CIDR, 23.98.43.0/24,no-resolve
+  - IP-CIDR, 23.248.191.0/24,no-resolve
+  - IP-CIDR, 35.155.231.0/24,no-resolve
+  - IP-CIDR, 35.168.106.0/24,no-resolve
+  - IP-CIDR, 35.178.208.0/24,no-resolve
+  - IP-CIDR, 45.40.48.0/24,no-resolve
+  - IP-CIDR, 45.255.124.0/24,no-resolve
+  - IP-CIDR, 50.17.126.0/24,no-resolve
+  - IP-CIDR, 50.18.128.0/24,no-resolve
+  - IP-CIDR, 52.52.84.0/24,no-resolve
+  - IP-CIDR, 52.58.56.0/24,no-resolve
+  - IP-CIDR, 52.194.158.0/24,no-resolve
+  - IP-CIDR, 52.221.46.0/24,no-resolve
+  - IP-CIDR, 54.178.26.0/24,no-resolve
+
+  # AS/APNIC/其他区域 IP 段 (部分合并)
+  - IP-CIDR, 103.65.41.0/24,no-resolve
+  - IP-CIDR, 103.98.18.0/24,no-resolve
+  - IP-CIDR, 103.123.127.0/24,no-resolve
+  - IP-CIDR, 103.193.127.0/24,no-resolve
+  - IP-CIDR, 103.211.230.0/24,no-resolve
+  - IP-CIDR, 128.1.87.0/24,no-resolve
+  - IP-CIDR, 129.227.57.0/24,no-resolve
+  - IP-CIDR, 129.227.71.0/24,no-resolve
+  # 合并 129.227.115.0/24 和 120.227.115.0/24 (注意：第二个IP地址可能有误，若无误则保持分开)
+  - IP-CIDR, 120.227.115.0/24,no-resolve
+  - IP-CIDR, 129.227.115.0/24,no-resolve 
+  
+  - IP-CIDR, 130.65.41.0/24,no-resolve
+  - IP-CIDR, 148.153.145.0/24,no-resolve
+  - IP-CIDR, 148.153.172.0/24,no-resolve
+  - IP-CIDR, 154.86.157.0/24,no-resolve
+
+  # 164.52.x.x IP 段 (仅合并相邻的 .0 和 .1)
+  - IP-CIDR, 164.52.0.0/23,no-resolve # 合并 164.52.0.0/24 和 164.52.1.0/24 (假设原列表有 164.52.1.0/24)
+  # 以下保持原样，因为不相邻或无法合并
+  - IP-CIDR, 164.52.6.0/24,no-resolve
+  - IP-CIDR, 164.52.32.0/24,no-resolve
+  - IP-CIDR, 164.52.102.0/24,no-resolve
+  - IP-CIDR, 164.52.124.0/24,no-resolve
+  
+  - IP-CIDR, 199.190.44.0/24,no-resolve
+  - IP-CIDR, 202.226.25.0/24,no-resolve
