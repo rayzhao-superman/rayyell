@@ -1,15 +1,31 @@
 payload:
-  # > TikTok
-  - PROCESS-NAME,com.ss.android.ugc.trill
-  - DOMAIN-SUFFIX,byteoversea.com
-  - DOMAIN-SUFFIX,ibytedtos.com
-  - DOMAIN-SUFFIX,ipstatp.com
-  - DOMAIN-SUFFIX,muscdn.com
-  - DOMAIN-SUFFIX,musical.ly
+  # ====================================================
+  # > TikTok (国际版) 核心服务与媒体流
+  # ----------------------------------------------------
+
+  # 1. 应用程序进程名 (Process Name)
+  # ----------------------------------------------------
+  - PROCESS-NAME,com.ss.android.ugc.trill # Android (Trill是TikTok海外版代号)
+  - PROCESS-NAME,com.zhiliaoapp.musically # 新增: 部分旧版/变种 Musical.ly App 包名
+  
+  # 2. 核心域名与 API
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,tiktok.com
   - DOMAIN-SUFFIX,tik-tokapi.com
+  - DOMAIN-SUFFIX,musical.ly            # 旧版 Musical.ly 域名
+  - DOMAIN-SUFFIX,tiktokv.com           # 视频核心 API
+  - DOMAIN-SUFFIX,tiktokv.us            # US 视频核心 API
+  - DOMAIN-SUFFIX,ibytedtos.com         # 字节跳动海外 TOS/CDN
+  - DOMAIN-SUFFIX,byteoversea.com       # 字节跳动海外核心服务
+
+  # 3. CDN 与媒体流 (Content Delivery Network & Media)
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,tiktokcdn.com
-  - DOMAIN-SUFFIX,tiktokv.com
-  - DOMAIN-SUFFIX,tiktokv.us
-  - DOMAIN-KEYWORD,-tiktokcdn-com
   - DOMAIN-SUFFIX,tiktokcdn-us.com
+  - DOMAIN-SUFFIX,muscdn.com            # 视频/音乐 CDN
+  - DOMAIN-SUFFIX,ipstatp.com           # 统计/性能数据
+  - DOMAIN-SUFFIX,pstatp.com            # 新增: 字节跳动通用统计/数据分析
+
+  # 4. 通用关键词 (作为兜底)
+  # ----------------------------------------------------
+  - DOMAIN-KEYWORD,tiktok
