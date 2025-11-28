@@ -1,34 +1,49 @@
 payload:
-  # > Netease 网易服务器
-  - DOMAIN-SUFFIX,163yun.com
-  - DOMAIN-SUFFIX,music.163.com
-  - DOMAIN-SUFFIX,music.126.net
-  - DOMAIN-SUFFIX,api.iplay.163.com
-  - DOMAIN-SUFFIX,apm.music.163.com
+  # ====================================================
+  # > Netease 网易服务器 (主要针对网易云音乐)
+  # ----------------------------------------------------
+
+  # 1. 核心服务与 API 域名 (Core Services & APIs)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,163yun.com         # 网易云基础服务
+  - DOMAIN-SUFFIX,music.163.com       # 网易云音乐主站
+  - DOMAIN-SUFFIX,api.iplay.163.com   # 音乐播放 API
+  - DOMAIN-SUFFIX,apm.music.163.com   # 性能监控 API
   - DOMAIN-SUFFIX,apm3.music.163.com
-  - DOMAIN-SUFFIX,interface.music.163.com
+  - DOMAIN-SUFFIX,interface.music.163.com # 接口 API
   - DOMAIN-SUFFIX,interface3.music.163.com
-  - DOMAIN-SUFFIX,mam.netease.com
-  - DOMAIN-SUFFIX,hz.netease.com
-  - IP-CIDR,39.105.63.80/32
-  - IP-CIDR,45.254.48.1/32
-  - IP-CIDR,47.100.127.239/32
-  - IP-CIDR,59.111.21.14/31
-  - IP-CIDR,59.111.179.214/32
-  - IP-CIDR,59.111.181.38/32
-  - IP-CIDR,59.111.181.60/32
-  - IP-CIDR,59.111.160.195/32
-  - IP-CIDR,59.111.160.197/32
-  - IP-CIDR,59.111.181.35/32
-  - IP-CIDR,59.111.238.29/32
-  - IP-CIDR,101.71.154.241/32
-  - IP-CIDR,103.126.92.132/32
-  - IP-CIDR,103.126.92.133/32
-  - IP-CIDR,112.13.119.17/32
-  - IP-CIDR,112.13.122.1/32
-  - IP-CIDR,115.236.118.33/32
-  - IP-CIDR,115.236.121.1/32
-  - IP-CIDR,118.24.63.156/32
-  - IP-CIDR,193.112.159.225/32
-  - IP-CIDR,223.252.199.66/32
-  - IP-CIDR,223.252.199.67/32
+  - DOMAIN-SUFFIX,mam.netease.com     # 认证/管理服务
+  - DOMAIN-SUFFIX,hz.netease.com      # 杭州网易（核心数据）
+
+  # 2. 媒体流与 CDN 域名 (Media & CDN)
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,music.126.net       # CDN / 静态资源
+  - DOMAIN-SUFFIX,m10.music.126.net   # 新增: 媒体流 CDN (M10/M7/M8 等前缀常见)
+  - DOMAIN-SUFFIX,m7.music.126.net    # 新增
+  - DOMAIN-SUFFIX,m8.music.126.net    # 新增
+
+  # 3. 核心 IP 地址段 (Core IP-CIDR)
+  #    - 已合并 IP 规则，以提升效率。
+  # ----------------------------------------------------
+  # 已合并 59.111.21.14/31
+  - IP-CIDR,59.111.160.195/31,no-resolve # 合并 59.111.160.195 & 197 (原为 /32)
+  - IP-CIDR,103.126.92.132/31,no-resolve # 合并 103.126.92.132 & 133 (原为 /32)
+  - IP-CIDR,223.252.199.66/31,no-resolve # 合并 223.252.199.66 & 67 (原为 /32)
+  
+  # 单独 IP 地址
+  - IP-CIDR,39.105.63.80/32,no-resolve
+  - IP-CIDR,45.254.48.1/32,no-resolve
+  - IP-CIDR,47.100.127.239/32,no-resolve
+  - IP-CIDR,59.111.21.14/31,no-resolve   # 原始规则 (保留)
+  - IP-CIDR,59.111.179.214/32,no-resolve
+  - IP-CIDR,59.111.181.35/32,no-resolve
+  - IP-CIDR,59.111.181.38/32,no-resolve
+  - IP-CIDR,59.111.181.60/32,no-resolve
+  - IP-CIDR,59.111.238.29/32,no-resolve
+  - IP-CIDR,101.71.154.241/32,no-resolve
+  - IP-CIDR,112.13.119.17/32,no-resolve
+  - IP-CIDR,112.13.122.1/32,no-resolve
+  - IP-CIDR,115.236.118.33/32,no-resolve
+  - IP-CIDR,115.236.121.1/32,no-resolve
+  - IP-CIDR,118.24.63.156/32,no-resolve
+  - IP-CIDR,193.112.159.225/32,no-resolve
