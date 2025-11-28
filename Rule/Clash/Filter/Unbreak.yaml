@@ -1,44 +1,58 @@
 payload:
-  # Unbreak
-  # > General
+  # ====================================================
+  # > Unbreak / 修复 (确保关键服务与推送功能正常)
+  # ----------------------------------------------------
+
+  # 1. 通用统计与调整 (General Analytics & Adjust)
+  # ----------------------------------------------------
+  - DOMAIN,app.adjust.com             # App 调整/追踪服务
+  - DOMAIN,bdtj.tagtic.cn             # 百度统计 (常见于各种 App)
+  
+  # 2. 阿里巴巴服务 (Alibaba)
+  # ----------------------------------------------------
+  - DOMAIN,log.mmstat.com             # 阿里统计/日志 (淘宝/支付宝等)
+  - DOMAIN,sycm.mmstat.com            # 生意参谋/数据服务
+
+  # 3. 腾讯服务 (Tencent)
+  # ----------------------------------------------------
+  - DOMAIN,fairplay.l.qq.com          # 腾讯视频 FairPlay 认证
+  - DOMAIN,livew.l.qq.com             # 腾讯视频直播/CDN
+  - DOMAIN,vd.l.qq.com                # 腾讯视频流数据
+  - DOMAIN,safebrowsing.urlsec.qq.com # 腾讯 URL 安全 (通常需直连)
+  
+  # 4. Google 核心服务与更新 (Core Services & Updates)
+  # ----------------------------------------------------
+  - DOMAIN,clientservices.googleapis.com # Google 客户端服务 (重要)
+  - DOMAIN,dl.google.com              # 下载服务
+  - DOMAIN,dl.l.google.com            # 下载服务 CDN
+  - DOMAIN,update.googleapis.com      # 更新服务
+  - DOMAIN,translate.googleapis.com   # 翻译服务 API
+  - DOMAIN-SUFFIX,blog.google         # 博客
+  - DOMAIN-SUFFIX,googletraveladservices.com # 广告/旅行服务
+
+  # 5. Google Fonts (字体服务)
+  # ----------------------------------------------------
+  - DOMAIN,fonts.googleapis.com
+  - DOMAIN,fonts.gstatic.com
+
+  # 6. Firebase Cloud Messaging (FCM - 推送服务)
+  #    - 仅保留核心域名，并添加通用的 IP 覆盖，避免 altX 冗余。
+  # ----------------------------------------------------
+  - DOMAIN,mtalk.google.com           # FCM 核心服务器
+  # 移除 alt1-mtalk.google.com 到 alt8-mtalk.google.com (已包含在 mtalk IP 范围)
+  - DOMAIN-SUFFIX,firebaseio.com      # 新增: Firebase API (与推送强关联)
+  - IP-CIDR,173.194.0.0/16,no-resolve # 新增: 覆盖 FCM 常用 IP 段 (如果 Google 规则中未覆盖)
+
+  # 7. 广告与杂项
+  # ----------------------------------------------------
+  - DOMAIN,pubads.g.doubleclick.net   # Google DoubleClick 广告 (用于 Paramount+ 等)
+  - DOMAIN,analytics.strava.com       # Strava 运动分析
+  - DOMAIN,msg.umeng.com              # 友盟推送/统计
+  - DOMAIN,msg.umengcloud.com         # 友盟云服务
+
+  # 8. 用户代理 (User Agents) - 保持注释，若有需要再启用
+  # ----------------------------------------------------
   # USER-AGENT,archero*
   # USER-AGENT,coffeecorp*
   # USER-AGENT,Coffee%20Corp*
   # USER-AGENT,restaurant-mobile*
-  - DOMAIN,app.adjust.com
-  - DOMAIN,bdtj.tagtic.cn
-  # > Alibaba
-  - DOMAIN,log.mmstat.com
-  - DOMAIN,sycm.mmstat.com
-  # > Google
-  - DOMAIN-SUFFIX,blog.google
-  - DOMAIN-SUFFIX,googletraveladservices.com
-  - DOMAIN,clientservices.googleapis.com
-  - DOMAIN,dl.google.com
-  - DOMAIN,dl.l.google.com
-  - DOMAIN,update.googleapis.com
-  - DOMAIN,translate.googleapis.com
-  # >> Google Fonts API
-  - DOMAIN,fonts.googleapis.com
-  - DOMAIN,fonts.gstatic.com
-  # >> Firebase Cloud Messaging
-  - DOMAIN,mtalk.google.com
-  - DOMAIN,alt1-mtalk.google.com
-  - DOMAIN,alt2-mtalk.google.com
-  - DOMAIN,alt3-mtalk.google.com
-  - DOMAIN,alt4-mtalk.google.com
-  - DOMAIN,alt5-mtalk.google.com
-  - DOMAIN,alt6-mtalk.google.com
-  - DOMAIN,alt7-mtalk.google.com
-  - DOMAIN,alt8-mtalk.google.com
-  # >> Paramount+
-  - DOMAIN,pubads.g.doubleclick.net
-  # > Tencent
-  - DOMAIN,fairplay.l.qq.com
-  - DOMAIN,livew.l.qq.com
-  - DOMAIN,vd.l.qq.com
-  # > Strava
-  - DOMAIN,analytics.strava.com
-  # > Umeng
-  - DOMAIN,msg.umeng.com
-  - DOMAIN,msg.umengcloud.com
