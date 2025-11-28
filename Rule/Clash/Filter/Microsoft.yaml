@@ -1,10 +1,24 @@
 payload:
-  # > Microsoft 微软服务器
+  # ====================================================
+  # > Microsoft 微软服务器 (OneDrive / Azure Storage)
+  # ----------------------------------------------------
+
+  # 1. OneDrive 核心服务与短链接
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,1drv.com
   - DOMAIN-SUFFIX,1drv.ms
-  - DOMAIN-SUFFIX,blob.core.windows.net
+  - DOMAIN,oneclient.sfx.ms     # OneDrive 客户端 API
+
+  # 2. OneDrive/Live 文件存储与旧域名 (Live File Storage)
+  # ----------------------------------------------------
   - DOMAIN-SUFFIX,livefilestore.com
-  - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-SUFFIX,storage.live.com
   - DOMAIN-SUFFIX,storage.msn.com
-  - DOMAIN,oneclient.sfx.ms
+
+  # 3. Azure Blob 存储 (Azure Storage / CDN)
+  #    - OneDrive 和许多 Microsoft 服务的内容交付依赖 Azure Blob。
+  # ----------------------------------------------------
+  - DOMAIN-SUFFIX,blob.core.windows.net
+  - DOMAIN-SUFFIX,zune.net        # 新增: Zune/Groove 音乐服务 (可能仍有旧 CDN 依赖)
+  - DOMAIN-SUFFIX,sfx.ms          # 新增: 微软短链接/服务框架
