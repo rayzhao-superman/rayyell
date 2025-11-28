@@ -1,4 +1,12 @@
 payload:
-  # > Star++
-  # 此条分流只是让 Star+ 串流时走 US 节点，需搭配 Star+ 相关分流使用
-  - DOMAIN-SUFFIX,media.starott.com
+  # ====================================================
+  # > StarMedia (媒体流与 CDN - 指向 StarMedia 策略组)
+  # ----------------------------------------------------
+  
+  # 媒体流与内容交付网络 (CDN)
+  - DOMAIN-SUFFIX,media.starott.com     # 视频流 (您原始提供的)
+  - DOMAIN-SUFFIX,star-media.com        # 媒体流域名
+  - DOMAIN-SUFFIX,star-images.com       # 静态图片/封面
+  
+  # BAMTech CDN (迪士尼流媒体技术的核心)
+  - DOMAIN-SUFFIX,bamgrid.com           # 迪士尼 BAMTech 媒体技术的核心 CDN (与 Disney+ 共享)
