@@ -22,18 +22,18 @@ payload:
   
   # 4. Google 核心服务与更新 (Core Services & Updates)
   # ----------------------------------------------------
-  #- DOMAIN,clientservices.googleapis.com # Google 客户端服务 (重要)
-  #- DOMAIN,dl.google.com              # 下载服务
-  #- DOMAIN,dl.l.google.com            # 下载服务 CDN
-  #- DOMAIN,update.googleapis.com      # 更新服务
-  #- DOMAIN,translate.googleapis.com   # 翻译服务 API
-  #- DOMAIN-SUFFIX,blog.google         # 博客
-  #- DOMAIN-SUFFIX,googletraveladservices.com # 广告/旅行服务
+  - DOMAIN,clientservices.googleapis.com # Google 客户端服务 (重要)
+   DOMAIN,dl.google.com              # 下载服务
+  - DOMAIN,dl.l.google.com            # 下载服务 CDN
+  - DOMAIN,update.googleapis.com      # 更新服务
+  - DOMAIN,translate.googleapis.com   # 翻译服务 API
+  - DOMAIN-SUFFIX,blog.google         # 博客
+  - DOMAIN-SUFFIX,googletraveladservices.com # 广告/旅行服务
 
   # 5. Google Fonts (字体服务)
   # ----------------------------------------------------
-  #- DOMAIN,fonts.googleapis.com
-  #- DOMAIN,fonts.gstatic.com
+  - DOMAIN,fonts.googleapis.com
+  - DOMAIN,fonts.gstatic.com
 
   # 6. Firebase Cloud Messaging (FCM - 推送服务)
   #    - 仅保留核心域名，并添加通用的 IP 覆盖，避免 altX 冗余。
@@ -41,7 +41,7 @@ payload:
   - DOMAIN,mtalk.google.com           # FCM 核心服务器
   # 移除 alt1-mtalk.google.com 到 alt8-mtalk.google.com (已包含在 mtalk IP 范围)
   - DOMAIN-SUFFIX,firebaseio.com      # 新增: Firebase API (与推送强关联)
-  - IP-CIDR,173.194.0.0/16,no-resolve # 新增: 覆盖 FCM 常用 IP 段 (如果 Google 规则中未覆盖)
+  #- IP-CIDR,173.194.0.0/16,no-resolve # 新增: 覆盖 FCM 常用 IP 段 (如果 Google 规则中未覆盖)
 
   # 7. 广告与杂项
   # ----------------------------------------------------
