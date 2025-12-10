@@ -255,4 +255,5 @@ payload:
   - DOMAIN-SUFFIX,360in.com
   - DOMAIN-SUFFIX,51ym.me
   # ... (此处省略大量的通用域名，例如 booking.com, douyu.com, ximalaya.com 等)
-  - DOMAIN-SUFFIX,cn
+  # - DOMAIN-SUFFIX,cn
+
