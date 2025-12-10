@@ -41,7 +41,7 @@ payload:
   - DOMAIN,mtalk.google.com           # FCM 核心服务器
   # 移除 alt1-mtalk.google.com 到 alt8-mtalk.google.com (已包含在 mtalk IP 范围)
   - DOMAIN-SUFFIX,firebaseio.com      # 新增: Firebase API (与推送强关联)
-  #- IP-CIDR,173.194.0.0/16,no-resolve # 新增: 覆盖 FCM 常用 IP 段 (如果 Google 规则中未覆盖)
+  - IP-CIDR,173.194.0.0/16,no-resolve # 新增: 覆盖 FCM 常用 IP 段 (如果 Google 规则中未覆盖)
 
   # 7. 广告与杂项
   # ----------------------------------------------------
