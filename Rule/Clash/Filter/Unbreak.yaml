@@ -23,7 +23,7 @@ payload:
   # 4. Google 核心服务与更新 (Core Services & Updates)
   # ----------------------------------------------------
   - DOMAIN,clientservices.googleapis.com # Google 客户端服务 (重要)
-   DOMAIN,dl.google.com              # 下载服务
+  - DOMAIN,dl.google.com              # 下载服务
   - DOMAIN,dl.l.google.com            # 下载服务 CDN
   - DOMAIN,update.googleapis.com      # 更新服务
   - DOMAIN,translate.googleapis.com   # 翻译服务 API
