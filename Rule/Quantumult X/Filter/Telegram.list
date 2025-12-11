@@ -27,6 +27,7 @@ HOST-SUFFIX, tx.me, Telegram
 # Telegram 的 IP 段较为固定，这是确保连接的关键。
 
 # Telegram 核心数据中心 IP 范围（全球）
+IP-CIDR, 58.28.192.0/22, Telegram
 IP-CIDR, 91.108.4.0/22, Telegram
 IP-CIDR, 91.108.8.0/22, Telegram
 IP-CIDR, 91.108.12.0/22, Telegram
