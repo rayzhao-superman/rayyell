@@ -18,6 +18,7 @@ HOST-SUFFIX, musically.com, TikTok
 
 # 2. 视频流媒体传输的核心域名
 HOST-SUFFIX, tiktokv.com, TikTok
+HOST-SUFFIX, tiktokv.us, TikTok
 
 # 3. 直播流和实时通信域名 
 HOST-SUFFIX, live.tiktok.com, TikTok           
