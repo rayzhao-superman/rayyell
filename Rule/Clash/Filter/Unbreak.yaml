@@ -26,7 +26,6 @@ payload:
   - DOMAIN,dl.google.com              # 下载服务
   - DOMAIN,dl.l.google.com            # 下载服务 CDN
   - DOMAIN,update.googleapis.com      # 更新服务
-  - DOMAIN,translate.googleapis.com   # 翻译服务 API
   - DOMAIN-SUFFIX,blog.google         # 博客
   - DOMAIN-SUFFIX,googletraveladservices.com # 广告/旅行服务
 
