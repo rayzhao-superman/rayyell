@@ -7,6 +7,7 @@ payload:
   # ----------------------------------------------------
   - DOMAIN,app.adjust.com             # App 调整/追踪服务
   - DOMAIN,bdtj.tagtic.cn             # 百度统计 (常见于各种 App)
+  - DOMAIN,appassets.androidplatform.net
   
   # 2. 阿里巴巴服务 (Alibaba)
   # ----------------------------------------------------
