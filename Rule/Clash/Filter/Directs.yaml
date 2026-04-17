@@ -150,6 +150,7 @@ payload:
   - DOMAIN-SUFFIX,doubanio.com
   - DOMAIN-SUFFIX,gifshow.com     # 快手
   - DOMAIN-SUFFIX,pinduoduo.com   # 拼多多
+  - DOMAIN,appassets.androidplatform.net
   
   # ----------------------------------------------------
   # 10. 电商与金融 (JD, PDD, CTrip, CMBC)
